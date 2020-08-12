@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+    <!--
+    Marketing Automation activity type registrations.
+    -->
+  <Sitecore>
+    <XConnect>
+        <Services>
+            <MarketingAutomation.Activity.PushNotification>
+                <Type>Sitecore.Xdb.MarketingAutomation.Locator.ActivityTypeRegistration, Sitecore.Xdb.MarketingAutomation</Type>
+                <LifeTime>Singleton</LifeTime>
+                <Options>
+                    <Id>{3D2CCC0A-5E13-421B-96F2-EE737319532F}</Id>
+                    <ImplementationType>SF.Foundation.PushNotifications.Activities.PushNotification,SF.Foundation.PushNotifications</ImplementationType>
+                </Options>
+            </MarketingAutomation.Activity.PushNotification>
+        </Services>
+    </XConnect>
+    </Sitecore>
+</Settings>
+	
+	

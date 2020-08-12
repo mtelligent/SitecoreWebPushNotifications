@@ -28,9 +28,10 @@ namespace SF.Foundation.PushNotifications.Activities
 
         public IPushNotificationService PushNotificationService { get; set; }
 
-        public PushNotification(IPushNotificationService pushNotificationService)
+        public PushNotification()
         {
-            PushNotificationService = pushNotificationService;
+            //Was having issues registering the service in the Automation engine, so newing up for now.
+            PushNotificationService = new PushNotificationService();
         }
 
         public string MessageId { get; set; }
@@ -39,7 +40,7 @@ namespace SF.Foundation.PushNotifications.Activities
         {
             try
             {
-                var subscriptions = GetPushSubscriptions(context.Contact);
+                var subscriptions = context.Contact.GetFacet<PushSubscriptions>();
                 if (subscriptions == null)
                 {
                     return new SuccessMove("Default");
@@ -62,7 +63,7 @@ namespace SF.Foundation.PushNotifications.Activities
                     try
                     {
                         //Let's send them.
-                        PushNotificationService.SendNotification(subscription.Value, message);
+                        PushNotificationService.SendNotification(subscription.Value, message, subscription.Value.VapidPublicKey, subscription.Value.VapidPrivateKey);
                     }
                     catch(Exception ex)
                     {
@@ -80,20 +81,5 @@ namespace SF.Foundation.PushNotifications.Activities
             }
         }
 
-
-        protected PushSubscriptions GetPushSubscriptions(Contact contextContact)
-        {
-            var id = contextContact.Identifiers.FirstOrDefault();
-            var identifier = new IdentifiedContactReference(id.Source, id.Identifier);
-            using (XConnectClient client = Sitecore.XConnect.Client.Configuration.SitecoreXConnectClientConfiguration.GetClient())
-            {
-                var contact = client.Get<Contact>(identifier, new Sitecore.XConnect.ContactExpandOptions(FacetNames.PushSubscriptions));
-                if (contact != null)
-                {
-                    return contact.GetFacet<PushSubscriptions>();
-                }
-            }
-            return null;
-        }
     }
 }

@@ -50,10 +50,11 @@ SF.PushNotfications = (function () {
             });
     }
 
-    function sendSubscriptionToBackEnd(subscription, goalId) {
+    function sendSubscriptionToBackEnd(subscription, goalId, configId) {
         var data = {
             subscription: subscription,
-            goalId: goalId
+            goalId: goalId,
+            configId: configId
         };
         return fetch('/api/sf/1.0/pushNotification/subscribe', {
             method: 'POST',
@@ -71,7 +72,7 @@ SF.PushNotfications = (function () {
             });
     }
 
-    function subscribe(publicKey, goalId) {
+    function subscribe(publicKey, goalId, configId) {
         if (!isSupported()) {
             console.log('Not Supported.');
             return;
@@ -83,7 +84,7 @@ SF.PushNotfications = (function () {
         }
 
         subscribeUserToPush(publicKey).then(function (subscription) {
-            sendSubscriptionToBackEnd(subscription, goalId);
+            sendSubscriptionToBackEnd(subscription, goalId, configId);
         });
         
     }

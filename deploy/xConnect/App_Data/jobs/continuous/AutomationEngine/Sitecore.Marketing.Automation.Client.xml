@@ -1,0 +1,629 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Marketing.Automation.Client</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Marketing.Automation.Client.Controllers.ActivityDescriptorsController">
+            <summary>
+            Controller to get the activity descriptors.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.ActivityDescriptorsController.#ctor(Sitecore.Marketing.Automation.Data.IActivityDescriptorRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Marketing.Automation.Client.Controllers.ActivityDescriptorsController"/>.
+            </summary>
+            <param name="repository">The activity descriptors repository.</param>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.ActivityDescriptorsController.GetById(System.Guid,System.String)">
+            <summary>
+            Gets an activity descriptor by Id.
+            </summary>
+            <param name="activityDescriptorId">The activity descriptor Id.</param>
+            <param name="cultureName">The name of the culture.</param>
+            <returns>The activity descriptor and HTTP Status Code 200 if found; otherwise - 404.</returns>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.ActivityDescriptorsController.GetAll(System.String)">
+            <summary>
+            Gets all activity descriptors.
+            </summary>
+            <param name="cultureName">The name of the culture.</param>
+            <returns>The activity descriptors and HTTP Status Code 200.</returns>
+        </member>
+        <member name="T:Sitecore.Marketing.Automation.Client.Controllers.AutomationCampaignTemplatesController">
+            <summary>
+            Controller to manage the automation campaign templates
+            </summary>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.AutomationCampaignTemplatesController.#ctor(Sitecore.Marketing.Automation.Data.IAutomationCampaignTemplateRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Marketing.Automation.Client.Controllers.AutomationCampaignTemplatesController"/> class
+            </summary>
+            <param name="automationCampaignTemplateRepository">The automation campaign temaplate repository</param>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.AutomationCampaignTemplatesController.Add(Sitecore.Marketing.Automation.Model.AutomationPlanDefinitionViewModel,System.String)">
+            <summary>
+            Adds an automation campaign template
+            </summary>
+            <param name="entity">The automation campaign template view model</param>
+            <param name="cultureName">The culture name</param>
+            <returns>HTTP Status Code 201 if created, 409 if campaign template already exists.</returns>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.AutomationCampaignTemplatesController.GetById(System.Guid,System.String)">
+            <summary>
+            Gets an automation campaign template by id
+            </summary>
+            <param name="id">The campaign template ID</param>
+            <param name="cultureName">The name of the culture</param>
+            <returns>The campaign template and HTTP Status Code 200 if found, 404 if campaign template is not found</returns>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.AutomationCampaignTemplatesController.GetAll(System.String,System.Int32,System.Int32,System.String,System.Nullable{System.Guid})">
+            <summary>
+            Gets all automation campaign templates.
+            </summary>
+            <param name="cultureName">The culture name.</param>
+            <param name="pageSize">The page size.</param>
+            <param name="pageNumber">The page number.</param>
+            <param name="nameFilter">Filter automation campaign templates by name</param>
+            <param name="marketingThemeId">The ID of the marketing theme that is used to filter the automation campaign templates</param>
+            <returns>The campaign templates and HTTP Status Code 200.</returns>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.AutomationCampaignTemplatesController.Update(Sitecore.Marketing.Automation.Model.AutomationPlanDefinitionViewModel,System.String)">
+            <summary>
+            Updates an automation campaign template
+            </summary>
+            <param name="entity">The automation campaign template view model</param>
+            <param name="cultureName">The name of the culture</param>
+            <returns>HTTP Status Code 204 if updated, 404 if campaign template is not found or invalid.</returns>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.AutomationCampaignTemplatesController.Delete(System.Guid,System.String)">
+            <summary>
+            Deletes an automation campaign template
+            </summary>
+            <param name="id">The automation campaign template ID</param>
+            <param name="cultureName">The name of the culture</param>
+            <returns>HTTP Status Code 200 if deleted, 404 if campaign template is not found or invalid.</returns>
+        </member>
+        <member name="T:Sitecore.Marketing.Automation.Client.Controllers.AutomationPlanReportingController">
+            <summary>
+            Controller to get the automation plan reports.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.AutomationPlanReportingController.#ctor(Sitecore.Marketing.Automation.Data.IAutomationPlanReportingRepository,Sitecore.Marketing.Automation.Data.IAutomationPlanRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Marketing.Automation.Client.Controllers.AutomationPlanReportingController"/>.
+            </summary>
+            <param name="reportingRepository">The automation plan reporting reportingRepository.</param>
+            <param name="planRepository">The automation plan repository</param>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.AutomationPlanReportingController.GetById(System.Guid,System.String)">
+            <summary>
+            Gets the reporting statistics for an automation plan
+            </summary>
+            <param name="planId">The plan Id.</param>
+            <param name="cultureName">The name of the culture.</param>
+            <returns>The activity descriptor and HTTP Status Code 200 if found; otherwise - 404.</returns>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.AutomationPlanReportingController.GetById(System.Guid,System.String,System.DateTime,System.DateTime)">
+            <summary>
+            Gets the reporting statistics for an automation plan
+            </summary>
+            <param name="planId">The plan Id.</param>
+            <param name="cultureName">The name of the culture.</param>
+            <param name="fromDate">Date from which to filter reporting data</param>
+            <param name="toDate">Date to which reporting data will be filtered</param>
+            <returns>The activity descriptor and HTTP Status Code 200 if found; otherwise - 404.</returns>
+        </member>
+        <member name="T:Sitecore.Marketing.Automation.Client.Controllers.AutomationPlansController">
+            <summary>
+            Controller to manage automation plans
+            </summary>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.AutomationPlansController.#ctor(Sitecore.Marketing.Automation.Data.IAutomationPlanRepository,Sitecore.Marketing.Automation.Data.IContactRepository,Sitecore.Framework.Messaging.IMessageBus{Sitecore.Marketing.Automation.Messaging.Buses.PurgeFromCampaignMessagesBus},Sitecore.Xdb.MarketingAutomation.OperationsClient.IAutomationOperationsClient,Sitecore.Abstractions.BaseLog)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Marketing.Automation.Client.Controllers.AutomationPlansController"/> class
+            </summary>
+            <param name="automationPlanRepository">The automationPlanRepository</param>
+            <param name="contactRepository">The contacts automationPlanRepository</param>
+            <param name="purgeAllFromPlanMessageBus">The message bus for <see cref="T:Sitecore.Marketing.Automation.Messaging.Messages.PurgeFromCampaignMessage"/></param>
+            <param name="automationOperationsClient">The automation operations client</param>
+            <param name="logger">The logger</param>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.AutomationPlansController.Add(Sitecore.Marketing.Automation.Model.AutomationPlanDefinitionViewModel,System.String,System.Boolean)">
+            <summary>
+            Adds an automation plan
+            </summary>
+            <param name="entity">The automation plan</param>
+            <param name="cultureName">The culture name</param>
+            <param name="activate">Activate the plan</param>
+            <returns>HTTP Status Code 201 if created, 409 if plan already exists.</returns>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.AutomationPlansController.GetById(System.Guid,System.String)">
+            <summary>
+            Gets an automation plan by id
+            </summary>
+            <param name="planId">The plan id</param>
+            <param name="cultureName">The name of the culture</param>
+            <returns>The plan and HTTP Status Code 200 if found, 404 if plan is not found</returns>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.AutomationPlansController.GetAll(System.String,System.String,System.Nullable{System.Boolean},System.Int32,System.Int32)">
+            <summary>
+            Gets all automation plans.
+            </summary>
+            <param name="cultureName">The culture name.</param>
+            <param name="createdBy">The plan creator.</param>
+            <param name="isActive">Indicates whether only active (or inactive) plans have to be returned; 
+            if <c>null</c> - all plans will be returned.</param>
+            <param name="pageSize">The page size.</param>
+            <param name="pageNumber">The page number.</param>
+            <returns>The plans and HTTP Status Code 200.</returns>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.AutomationPlansController.Update(Sitecore.Marketing.Automation.Model.AutomationPlanDefinitionViewModel,System.String,System.Boolean)">
+            <summary>
+            Updates an automation plan
+            </summary>
+            <param name="entity">The automation plan</param>
+            <param name="cultureName">The name of the culture</param>
+            <param name="activate">Activate the plan</param>
+            <returns>HTTP Status Code 204 if updated, 404 if plan is not found or invalid.</returns>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.AutomationPlansController.Activate(System.Guid,System.String)">
+            <summary>
+            Activates an automation plan
+            </summary>
+            <param name="planId">The id of the plan</param>
+            <param name="cultureName">The name of the culture</param>
+            <returns>HTTP Status Code 204 if updated, 404 if plan is not found or invalid.</returns>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.AutomationPlansController.Deactivate(System.Guid,System.String)">
+            <summary>
+            Deactivates an automation plan
+            </summary>
+            <param name="planId">The id of the plan</param>
+            <param name="cultureName">The name of the culture</param>
+            <returns>HTTP Status Code 204 if deactivated, 404 if plan is not found or invalid.</returns>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.AutomationPlansController.Delete(System.Guid,System.String)">
+            <summary>
+            Deletes an automation plan
+            </summary>
+            <param name="planId">The automation plan id</param>
+            <param name="cultureName">The name of the culture</param>
+            <returns>HTTP Status Code 200 if deleted, 404 if plan is not found or invalid.</returns>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.AutomationPlansController.Enroll(System.Guid,Sitecore.Marketing.Automation.Model.EnrollContactsFromListViewModel,System.String)">
+            <summary>
+            Enrolls all contacts from a specific contact list into an automation campaign.
+            </summary>
+            <param name="campaignId">The id of the automation campaign.</param>
+            <param name="enrollContactsFromListViewModel">The view model of the contact list to enroll contacts from. </param>
+            <param name="cultureName">The name of the culture.</param>
+            <returns>202 Status code if the request is successful or 404 if automation campaign is not found.</returns>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.AutomationPlansController.Purge(System.Guid,System.String)">
+            <summary>
+            Purges the currently enrolled contacts from a specific automation campaign
+            </summary>
+            <param name="campaignId">The id of the automation campaign</param>
+            <param name="cultureName">The name of the culture</param>
+            <returns>202 Status code if the purge message is queued or 404 if automation campaign is not found</returns>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.AutomationPlansController.Purge(System.Guid,System.String,Sitecore.Marketing.Automation.Model.PurgeFromCampaignViewModel)">
+            <summary>
+            Purges a specific list of currently enrolled contacts from a specific automation campaign
+            </summary>
+            <param name="campaignId">The id of the automation campaign</param>
+            <param name="cultureName">The name of the culture</param>
+            <param name="purgeFromCampaignViewModel">The view model of contacts to purge</param>
+            <returns>202 Status code if the purge message is queued or 404 if automation campaign is not found</returns>
+        </member>
+        <member name="T:Sitecore.Marketing.Automation.Client.Controllers.BaseServicesApiController">
+            <summary>
+            Base class for Marketing Automation Web API controllers. This is used to ensure behavior is the same
+            across all controllers e.g. serialization
+            </summary>
+        </member>
+        <member name="T:Sitecore.Marketing.Automation.Client.Controllers.CategoryInformationController">
+            <summary>
+            Controller to get the category information.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.CategoryInformationController.#ctor(Sitecore.Marketing.Automation.Data.ICategoryInformationRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Marketing.Automation.Client.Controllers.CategoryInformationController"/>.
+            </summary>
+            <param name="repository">The CategoryInformation repository.</param>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.CategoryInformationController.GetAll(System.String)">
+            <summary>
+            Gets all category information.
+            </summary>
+            <param name="cultureName">The name of the culture.</param>
+            <returns>The category informations and HTTP Status Code 200.</returns>
+        </member>
+        <member name="T:Sitecore.Marketing.Automation.Client.Controllers.ContactsExportController">
+            <summary>
+            Controller to export the contacts.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Marketing.Automation.Client.Controllers.ContactsExportController.CsvHeaders">
+            <summary>
+            Gets the comma separated string of headers of the exported csv file.
+            </summary>
+            <returns>A comma separated string of <see cref="T:Sitecore.Marketing.Automation.Model.ContactViewModel"/> properties</returns>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.ContactsExportController.#ctor(Sitecore.Abstractions.BaseLog,Sitecore.Marketing.Automation.Data.IContactRepository,Sitecore.Marketing.Automation.Pipelines.IPipelineHelper)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Marketing.Automation.Client.Controllers.ContactsExportController"/> class.
+            </summary>
+            <param name="logger">The logger.</param>
+            <param name="contactRepository">The contact repository.</param>
+            <param name="pipelineHelper">The pipeline helper</param>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.ContactsExportController.ExportContactsByPlan(System.Guid,System.String,System.String,System.String)">
+            <summary>
+            Export the contacts in the campaign by plan.
+            </summary>
+            <param name="planId">The plan identifier.</param>
+            <param name="cultureName">Name of the culture.</param>
+            <param name="bookmark">The bookmark.</param>
+            <param name="query">The search query</param>
+            <returns>The contacts in the campaign by plan and HTTP Status Code 200.</returns>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.ContactsExportController.ExportContactsByActivity(System.Guid,System.Guid,System.String,System.String,System.String)">
+            <summary>
+            Export the contacts in the campaign by activity.
+            </summary>
+            <param name="planId">The plan identifier.</param>
+            <param name="activityId">The activity identifier.</param>
+            <param name="cultureName">Name of the culture.</param>
+            <param name="bookmark">The bookmark.</param>
+            <param name="query">The search query</param>
+            <returns>The contacts and HTTP Status Code 200.</returns>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.ContactsExportController.ExportContacts(System.Net.Http.HttpResponseMessage,Sitecore.XConnect.IAsyncEntityBatchEnumerator{Sitecore.XConnect.Contact})">
+            <summary>
+            Exports the contacts.
+            </summary>
+            <param name="responseMessageData">The response message data.</param>
+            <param name="contactsEnumerator">The <see cref="T:Sitecore.XConnect.IAsyncEntityBatchEnumerator`1"/> that iterates through the <see cref="T:Sitecore.XConnect.Contact"/>s</param>
+            <returns>A <see cref="T:System.Net.Http.HttpResponseMessage"/></returns>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.ContactsExportController.Dispose(System.Boolean)">
+            <summary>
+            Disposes <see cref="T:Sitecore.Marketing.Automation.Data.IContactRepository"/> 
+            </summary>
+            <param name="disposing">Confirms when to dispose</param>
+        </member>
+        <member name="T:Sitecore.Marketing.Automation.Client.Controllers.ContactsReportController">
+            <summary>
+            Controller to get the contacts.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.ContactsReportController.#ctor(Sitecore.Marketing.Automation.Data.IContactRepository,Sitecore.Marketing.Automation.Data.IAutomationPlanRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Marketing.Automation.Client.Controllers.ContactsReportController"/>.
+            </summary>
+            <param name="contactRepository">The ContactRepository repository.</param>
+            <param name="planRepository">The plan repository.</param>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.ContactsReportController.GetContactsByPlan(System.Guid,System.String,System.Int32,System.String,System.String)">
+            <summary>
+            Gets the contacts in the campaign by plan.
+            </summary>
+            <param name="planId">The plan identifier.</param>
+            <param name="cultureName">Name of the culture.</param>
+            <param name="pageSize">Size of the page.</param>
+            <param name="bookmark">The bookmark.</param>
+            <param name="query">The query</param>
+            <returns>The contacts in the campaign by plan and HTTP Status Code 200.</returns>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.ContactsReportController.GetContactsByActivity(System.Guid,System.Guid,System.String,System.Int32,System.String,System.String)">
+            <summary>
+            Gets the contacts in the campaign by activity.
+            </summary>
+            <param name="planId">The plan identifier.</param>
+            <param name="activityId">The activity identifier.</param>
+            <param name="cultureName">Name of the culture.</param>
+            <param name="pageSize">Size of the page.</param>
+            <param name="bookmark">The bookmark.</param>
+            <param name="query">The query</param>
+            <returns>The contacts and HTTP Status Code 200.</returns>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.ContactsReportController.GetTotalContacts(System.Guid,System.String,System.Int32,System.String)">
+            <summary>
+            Gets the total enrolled contacts in a campaign
+            </summary>
+            <param name="campaignId">The campaign identifier.</param>
+            <param name="cultureName">Name of the culture.</param>
+            <param name="pageSize">Size of the page.</param>
+            <param name="bookmark">The bookmark.</param>
+            <returns>The contacts and HTTP Status Code 200.</returns>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.ContactsReportController.Dispose(System.Boolean)">
+            <summary>
+            Disposes <see cref="T:Sitecore.Marketing.Automation.Data.IContactRepository"/> 
+            </summary>
+            <param name="disposing">Confirms when to dispose</param>
+        </member>
+        <member name="T:Sitecore.Marketing.Automation.Client.Controllers.CurrentCultureController">
+            <summary>
+            Controller to get the current culture.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.CurrentCultureController.Get">
+            <summary>
+            Gets current culture
+            </summary>
+            <returns>Name of current culture.</returns>
+        </member>
+        <member name="T:Sitecore.Marketing.Automation.Client.Controllers.MarketingThemesController">
+            <summary>
+            Controller to get marketing themes.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.MarketingThemesController.#ctor(Sitecore.Marketing.Automation.Data.IMarketingThemeRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Marketing.Automation.Client.Controllers.MarketingThemesController"/>.
+            </summary>
+            <param name="repository">The marketing theme repository</param>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.MarketingThemesController.GetAll(System.String)">
+            <summary>
+            Gets all marketing themes
+            </summary>
+            <param name="cultureName">The name of the culture</param>
+            <returns>The marketing themes and HTTP Status Code 200.</returns>
+        </member>
+        <member name="T:Sitecore.Marketing.Automation.Client.Controllers.PluginDescriptorsController">
+            <summary>
+            Controller to get the plugin descriptors.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.PluginDescriptorsController.#ctor(Sitecore.Marketing.Automation.Data.IPluginDescriptorsRepository)">
+            <summary>
+            Instantiates a new instance of the <see cref="T:Sitecore.Marketing.Automation.Client.Controllers.PluginDescriptorsController"/>.
+            </summary>
+            <param name="repository">The plugin descriptors repository.</param>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Controllers.PluginDescriptorsController.GetAll">
+            <summary>
+            Gets all plugin descriptors.
+            </summary>
+            <returns>A successful HTTP response that contains the plugin descriptors.</returns>
+        </member>
+        <member name="T:Sitecore.Marketing.Automation.Client.DependencyEvaluator">
+            <summary>
+            Evaluates the required dependencies to determine whether marketing automation is enabled or not.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.DependencyEvaluator.IsEnabled">
+            <summary>
+            Determines whether marketing automation is enabled or not.
+            </summary>
+            <returns>
+              <c>true</c> if this marketing automation is enabled; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Marketing.Automation.Client.Filters.AccessDeniedExceptionFilterAttribute">
+            <summary>
+            Access denied exception filter
+            </summary>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Filters.AccessDeniedExceptionFilterAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Marketing.Automation.Client.Filters.AccessDeniedExceptionFilterAttribute"/> class
+            </summary>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Filters.AccessDeniedExceptionFilterAttribute.#ctor(Sitecore.Abstractions.BaseLog)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Marketing.Automation.Client.Filters.AccessDeniedExceptionFilterAttribute"/> class
+            </summary>
+            <param name="logger">The logger</param>
+        </member>
+        <member name="P:Sitecore.Marketing.Automation.Client.Filters.AccessDeniedExceptionFilterAttribute.Logger">
+            <summary>
+            The logger
+            </summary>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Filters.AccessDeniedExceptionFilterAttribute.OnException(System.Web.Http.Filters.HttpActionExecutedContext)">
+            <summary>
+            Called when [exception].
+            </summary>
+            <param name="actionExecutedContext">The actionExecutedContext.</param>
+        </member>
+        <member name="T:Sitecore.Marketing.Automation.Client.Filters.CamelCaseSerializerContractResolverAttribute">
+            <summary>
+            Attribute used by Marketing Automation Web API controllers to ensure serialization is done using camelCasing
+            This replaces all JsonMediaTypeFormatters in the controllerSettings.Formatters collection with a new instance 
+            that has a CamelCasePropertyNamesContractResolver.
+            The JsonMediaTypeFormatters in the controllerSettings.Formatters collection cannot be changed directly 
+            as any changes will affect the Global Configuration.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Filters.CamelCaseSerializerContractResolverAttribute.Initialize(System.Web.Http.Controllers.HttpControllerSettings,System.Web.Http.Controllers.HttpControllerDescriptor)">
+            <inheritdoc />
+        </member>
+        <member name="T:Sitecore.Marketing.Automation.Client.Filters.SitecoreAuthorizeFilterAttribute">
+            <summary>
+            Attribute to authorize Sitecore user.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Marketing.Automation.Client.Filters.SitecoreAuthorizeFilterAttribute.AdminsOnly">
+            <summary>
+            Gets or sets a value indicating whether only admins are authenticated.
+            </summary>
+            <value><c>true</c> if only admins are authenticated; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Filters.SitecoreAuthorizeFilterAttribute.IsAuthorized(System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            Determines whether the specified action context is authorized.
+            </summary>
+            <param name="actionContext">The action context.</param>
+            <returns>
+            True if user is administrator. Otherwise we rely on logic in base attribute.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Marketing.Automation.Client.Filters.TypeExceptionFilterAttribute">
+            <summary>
+            Exception filter for Web API services
+            </summary>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Filters.TypeExceptionFilterAttribute.#ctor(System.Type,System.Net.HttpStatusCode)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Marketing.Automation.Client.Filters.TypeExceptionFilterAttribute"/> class
+            </summary>
+            <param name="exceptionType">The exception type that should be handled</param>
+            <param name="statusCode">The http status code to return if the exception type is thrown</param>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Filters.TypeExceptionFilterAttribute.#ctor(System.Type,System.Net.HttpStatusCode,System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Marketing.Automation.Client.Filters.TypeExceptionFilterAttribute"/> class
+            </summary>
+            <param name="exceptionType">The exception type that should be handled</param>
+            <param name="statusCode">The http status code to return if the exception type is thrown</param>
+            <param name="message">The custom message to return. If not defined,p the exception message will be returned</param>
+            <param name="logException">Set to output the exception</param>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Filters.TypeExceptionFilterAttribute.#ctor(System.Type,System.Net.HttpStatusCode,Sitecore.Abstractions.BaseLog,System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Marketing.Automation.Client.Filters.TypeExceptionFilterAttribute"/> class
+            </summary>
+            <param name="exceptionType">The exception type that should be handled</param>
+            <param name="statusCode">The http status code to return if the exception type is thrown</param>
+            <param name="logger">The logger</param>
+            <param name="message">The custom message to return. If not defined,p the exception message will be returned</param>
+            <param name="logException">Set to output the exception</param>
+        </member>
+        <member name="P:Sitecore.Marketing.Automation.Client.Filters.TypeExceptionFilterAttribute.ExceptionType">
+            <summary>
+            The exception type to handle in the filter
+            </summary>
+        </member>
+        <member name="P:Sitecore.Marketing.Automation.Client.Filters.TypeExceptionFilterAttribute.StatusCode">
+            <summary>
+            The HTTP status code to return
+            </summary>
+        </member>
+        <member name="P:Sitecore.Marketing.Automation.Client.Filters.TypeExceptionFilterAttribute.Message">
+            <summary>
+            The message to return in the response.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Marketing.Automation.Client.Filters.TypeExceptionFilterAttribute.LogException">
+            <summary>
+            Specifies whether or not the exception should be logged
+            </summary>
+        </member>
+        <member name="P:Sitecore.Marketing.Automation.Client.Filters.TypeExceptionFilterAttribute.Logger">
+            <summary>
+            The exception logger
+            </summary>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Filters.TypeExceptionFilterAttribute.OnException(System.Web.Http.Filters.HttpActionExecutedContext)">
+            <summary>
+            Called when an unhandled exception is thrown by any Web API controllers decorated with this attribute.
+            </summary>
+            <param name="actionExecutedContext">The actionExecutedContext.</param>
+        </member>
+        <member name="T:Sitecore.Marketing.Automation.Client.LaunchPadPathResolver">
+            <summary>
+            Used by the launchpad application to determine the root path of the marketing automation application.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.LaunchPadPathResolver.Execute">
+            <summary>
+            Returns the root path of the marketing automation application.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Marketing.Automation.Client.MarketingAutomationClientServiceConfigurator">
+            <summary>
+            Class used to register the marketing automation services with the IoC container
+            </summary>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.MarketingAutomationClientServiceConfigurator.Configure(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Adds all marketing automation controllers and services
+            </summary>
+            <param name="serviceCollection">The service collection to add to</param>
+        </member>
+        <member name="T:Sitecore.Marketing.Automation.Client.RuleSetEditorOptionsViewModel">
+            <summary>
+            view model for the Ruleseteditor options controller response.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Marketing.Automation.Client.RuleSetEditorOptionsViewModel.Handle">
+            <summary>
+            the handle for the ruleseteditor 
+            </summary>
+        </member>
+        <member name="T:Sitecore.Marketing.Automation.Client.Settings">
+            <summary>
+            Defines the settings from the 'Web.config' file.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Marketing.Automation.Client.Settings.RulesPath">
+            <summary>
+            Gets the path to the rule items.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Marketing.Automation.Client.Settings.UseContextContentLanguage">
+            <summary>
+            Specifies if Context.ContentLanguage.Name is used.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Marketing.Automation.Client.Settings.ExportContactsBatchSize">
+            <summary>
+            Gets the batch/page size of the contacts to export.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Marketing.Automation.Client.Settings.PurgeContactsBatchSize">
+            <summary>
+            Gets the batch/page size of the contacts to purge.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Marketing.Automation.Client.Settings.HasValidLicense">
+            <summary>
+            Gets a value that indicates whether the license has marketing automation module.
+            </summary>
+            <value>
+            <c>true</c> if the license has marketing automation module; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Sitecore.Marketing.Automation.Client.Settings.Enabled">
+            <summary>
+            Gets a value that indicates whether marketing automation is enabled.
+            </summary>
+            <value>
+              <c>true</c> if marketing automation is enabled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Sitecore.Marketing.Automation.Client.Sitecore.MarketingAutomation.RuleEditorOptions">
+            <summary>
+            The handler which provides the Url with a handle for a particular value.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Marketing.Automation.Client.Sitecore.MarketingAutomation.RuleEditorOptions.ProcessRequest(System.Web.HttpContext)">
+            <summary>
+            Enables processing of HTTP Web requests by a <see cref="T:Sitecore.Marketing.Automation.Client.Sitecore.MarketingAutomation.RuleEditorOptions"/> handler and writes in
+            response context the Url with a handle for a particular 'value' (from a query string of the request).
+            </summary>
+            <param name="context">The <see cref="T:System.Web.HttpContext"/>.</param>
+        </member>
+        <member name="P:Sitecore.Marketing.Automation.Client.Sitecore.MarketingAutomation.RuleEditorOptions.IsReusable">
+            <summary>
+            Gets a value indicating whether another request can use the IHttpHandler instance.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Marketing.Automation.Client.Texts">
+            <summary>
+            Localisable texts
+            </summary>
+        </member>
+        <member name="F:Sitecore.Marketing.Automation.Client.Texts.YouDoNotHaveTheSufficientAccessRights">
+            <summary>
+            You do not have the sufficient access rights to perform this action. Please contact your administrator
+            </summary>
+        </member>
+    </members>
+</doc>

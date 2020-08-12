@@ -14,6 +14,7 @@ namespace SF.Feature.PushNotifications.Models
         [JsonProperty("goalId")]
         public string GoalId { get; set; }
 
-        
+        [JsonProperty("configId")]
+        public string ConfigurationId { get; set; }
     }
 }

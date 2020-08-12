@@ -13,6 +13,11 @@
     {
         dataAttr.Append(@" data-goalId=").Append(Model.GoalId);
     }
+
+    if (Model.ConfigId != Guid.Empty)
+    {
+        dataAttr.Append(@" data-configId=").Append(Model.ConfigId);
+    }
    
 }
 

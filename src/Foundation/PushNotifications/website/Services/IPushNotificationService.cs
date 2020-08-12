@@ -8,6 +8,6 @@ namespace SF.Foundation.PushNotifications.Services
 {
     public interface IPushNotificationService
     {
-        void SendNotification(PushSubscription subscription, string message);
+        void SendNotification(PushSubscription subscription, string message, string publicKey, string privateKey);
     }
 }

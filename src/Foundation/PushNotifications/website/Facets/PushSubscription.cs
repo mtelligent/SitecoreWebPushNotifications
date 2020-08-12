@@ -14,5 +14,9 @@ namespace SF.Foundation.PushNotifications.Facets
 
         public Dictionary<string, string> Keys { get; set; }
 
+        public string VapidPublicKey { get; set; }
+
+        public string VapidPrivateKey { get; set; }
+
     }
 }

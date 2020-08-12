@@ -10,7 +10,7 @@ namespace SF.Foundation.PushNotifications.Services
     {
         private static PushServiceClient webPushClient = new PushServiceClient();
 
-        public void SendNotification(Facets.PushSubscription subscription, string message)
+        public void SendNotification(Facets.PushSubscription subscription, string message, string publicKey, string privateKey)
         {
             try
             {
@@ -18,10 +18,8 @@ namespace SF.Foundation.PushNotifications.Services
                 webSubscription.Endpoint = subscription.Endpoint;
                 webSubscription.Keys = subscription.Keys;
 
-                var config = PushNotificationConfigurationService.GetConfiguration();
-
                 //Need to make sure we're using right keys for subscription, maybe change to get for specific site.
-                var vapidAuth = new Lib.Net.Http.WebPush.Authentication.VapidAuthentication(config.PublicKey, config.PrivateKey);
+                var vapidAuth = new Lib.Net.Http.WebPush.Authentication.VapidAuthentication(publicKey, privateKey);
 
                 var pushMessage = new PushMessage(message);
                 

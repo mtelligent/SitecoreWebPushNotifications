@@ -16,6 +16,7 @@ using Sitecore.Xdb.MarketingAutomation.Core.Requests;
 using Sitecore.Xdb.MarketingAutomation.Core.Results;
 using Sitecore.Marketing.Definitions.Goals;
 using Sitecore.Marketing.Definitions;
+using SF.Foundation.PushNotifications.Services;
 
 namespace SF.Feature.PushNotifications.Controllers
 {
@@ -38,18 +39,21 @@ namespace SF.Feature.PushNotifications.Controllers
             IGoalDefinition goalDefinition = null;
             if (Guid.TryParse(subscription.GoalId, out goalId))
             {
-                IDefinitionManager<IGoalDefinition> goalDefinitionManager = ServiceLocator.ServiceProvider.GetDefinitionManagerFactory().GetDefinitionManager<Sitecore.Marketing.Definitions.Goals.IGoalDefinition>();
-                goalDefinition = goalDefinitionManager.Get(goalId, System.Globalization.CultureInfo.InvariantCulture);
+                using (new Sitecore.SecurityModel.SecurityDisabler())
+                {
+                    IDefinitionManager<IGoalDefinition> goalDefinitionManager = ServiceLocator.ServiceProvider.GetDefinitionManagerFactory().GetDefinitionManager<Sitecore.Marketing.Definitions.Goals.IGoalDefinition>();
+                    goalDefinition = goalDefinitionManager.Get(goalId, System.Globalization.CultureInfo.InvariantCulture);
 
-                if (goalDefinition != null)
-                {
-                    //Trigger Goal on last page in the tracker. (May be incorrect if visitor is in multiple tabs)
-                    var page = Tracker.Current.Interaction.PreviousPage;
-                    page.RegisterGoal(goalDefinition);
-                }
-                else
-                {
-                    Sitecore.Diagnostics.Log.Warn("Goal: [" + subscription.GoalId + "] Not Defined", this);
+                    if (goalDefinition != null)
+                    {
+                        //Trigger Goal on last page in the tracker. (May be incorrect if visitor is in multiple tabs)
+                        var page = Tracker.Current.Interaction.PreviousPage;
+                        page.RegisterGoal(goalDefinition);
+                    }
+                    else
+                    {
+                        Sitecore.Diagnostics.Log.Warn("Goal: [" + subscription.GoalId + "] Not Defined", this);
+                    }
                 }
             }
             else
@@ -76,6 +80,15 @@ namespace SF.Feature.PushNotifications.Controllers
             foreach (var key in subscription.Subscription.Keys.Keys)
             {
                 facetSubscription.Keys.Add(key, subscription.Subscription.Keys[key]);
+            }
+
+            var result = Guid.Empty;
+            if (Guid.TryParse(subscription.ConfigurationId, out result))
+            {
+                var configItem = Sitecore.Context.Database.GetItem(new Sitecore.Data.ID(result));
+                var config = PushNotificationConfigurationService.GetConfiguration(configItem);
+                facetSubscription.VapidPrivateKey = config.PrivateKey;
+                facetSubscription.VapidPublicKey = config.PublicKey;
             }
 
             PushSubscriptionManager.Current[Tracker.Current.Interaction.DeviceId] = facetSubscription;

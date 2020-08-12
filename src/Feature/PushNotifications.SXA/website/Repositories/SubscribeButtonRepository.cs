@@ -26,6 +26,8 @@ namespace SF.Feature.PushNotifications.SXA.Repositories
             //Need Public Key to subscribe.
             model.PublicKey = PushNotificationConfigurationService.GetConfiguration().PublicKey;
 
+            model.ConfigId = PushNotificationConfigurationService.GetConfigurationId();
+
             return model;
         }
     }

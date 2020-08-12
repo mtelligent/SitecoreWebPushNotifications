@@ -59,6 +59,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="PushNotification.sc.MarketingAutomation.ActivityType.xml" />
+    <Content Include="PushNotification.sc.MarketingAutomation.Services.xml" />
+    <Content Include="sc.MarketingAutomation.ContactLoader.xml" />
     <Content Include="sc.PushNotifications.Model.xml" />
     <None Include="App.config" />
     <Content Include="Foundation.PushNotifications.config" />

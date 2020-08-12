@@ -11,5 +11,7 @@ namespace SF.Feature.PushNotifications.SXA.Models
         public Guid GoalId { get; set; }
 
         public string PublicKey { get; set; }
+
+        public Guid ConfigId { get; set; }
     }
 }

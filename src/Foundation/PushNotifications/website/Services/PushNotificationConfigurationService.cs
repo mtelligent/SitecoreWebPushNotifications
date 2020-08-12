@@ -42,9 +42,32 @@ namespace SF.Foundation.PushNotifications.Services
             return GetConfiguration(configItem);
         }
 
+        public static Guid GetConfigurationId()
+        {
+            var multiSiteContext = ServiceLocator.ServiceProvider.GetService<IMultisiteContext>();
+            if (multiSiteContext == null || Sitecore.Context.Site == null || string.IsNullOrEmpty(Sitecore.Context.Site.StartPath))
+            {
+                return Guid.Empty;
+            }
+
+            var settingsItem = multiSiteContext.GetSettingsItem(Sitecore.Context.Database.GetItem(Sitecore.Context.Site.StartPath));
+            if (settingsItem == null)
+            {
+                return Guid.Empty;
+            }
+
+            var configItem = settingsItem.FirstChildInheritingFrom(new Sitecore.Data.ID(SF.Foundation.PushNotifications.Constants.TemplateIds.PushNotficationsConfiguration));
+            if (configItem == null)
+            {
+                return Guid.Empty;
+            }
+
+            return configItem.ID.Guid;
+        }
+
         public static PushNotificationsConfiguration GetConfiguration(Item configItem)
         {
-            
+
             var config = new PushNotificationsConfiguration();
             config.MailTo = configItem.Fields[SF.Foundation.PushNotifications.Constants.FieldIds.MailTo].Value;
             config.PrivateKey = configItem.Fields[SF.Foundation.PushNotifications.Constants.FieldIds.PrivateKey].Value;
