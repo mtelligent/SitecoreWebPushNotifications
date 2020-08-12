@@ -1,0 +1,21 @@
+﻿---
+ID: "b53db7db-0566-4e3f-86e4-351af477693b"
+Parent: "36b4a971-5ba0-4935-b628-ecaef5222a78"
+Template: "2683398d-1a6e-47fc-8283-56e74bbc2639"
+Path: /sitecore/system/Settings/Analytics/Marketing Automation/Activity Types/Send Push Notification/Parameters/Body
+DB: master
+SharedFields:
+- ID: "b80911e1-9625-418b-9951-21b282ce33f0"
+  Hint: Key
+  Value: Body
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200807T211412Z
+    - ID: "c2907341-19e2-476d-8932-0873f20bcc08"
+      Hint: Name
+      Value: Body

@@ -1,0 +1,18 @@
+﻿---
+ID: "e991f1d8-2d7e-4646-9c70-11caa0798e1f"
+Parent: "15f192a2-f623-4a54-9d0e-274fb0390448"
+Template: "9c0dac28-08aa-4b44-bc21-53363206f6a5"
+Path: /sitecore/media library/Base Themes/Push Notifications/Styles
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200409T181936Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

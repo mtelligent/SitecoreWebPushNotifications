@@ -1,0 +1,21 @@
+﻿---
+ID: "077e8818-d356-4f0b-bf5c-96e65034b108"
+Parent: "f21b34e9-45bf-4438-81ed-c2a6d699070f"
+Template: "f21b34e9-45bf-4438-81ed-c2a6d699070f"
+Path: /sitecore/templates/Feature/SF/PushNotifications/Folder Templates/Subscribe Button Folder/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: |
+    {B7156DE1-5EA6-4291-A497-2ADF1B9E67AA}
+    {F21B34E9-45BF-4438-81ED-C2A6D699070F}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200409T181518Z

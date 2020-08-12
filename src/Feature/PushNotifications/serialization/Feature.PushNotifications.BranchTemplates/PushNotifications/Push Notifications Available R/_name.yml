@@ -1,0 +1,23 @@
+﻿---
+ID: "90e1ff80-4566-43fd-a66f-7e2156c4b2eb"
+Parent: "bf229164-dc1f-45b3-8441-884d6441ba68"
+Template: "76da0a8d-fc7e-42b2-af1e-205b49e43f98"
+Path: /sitecore/templates/Branches/Feature/SF/PushNotifications/Push Notifications Available Renderings/$name
+DB: master
+SharedFields:
+- ID: "715ae6c0-71c8-4744-ab4f-65362d20ad65"
+  Hint: Renderings
+  Type: TreelistEx
+  Value: "{3E7B8F7A-B4BA-43F2-B1CD-B37DA81B1048}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200409T183647Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

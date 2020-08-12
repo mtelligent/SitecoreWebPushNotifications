@@ -1,0 +1,27 @@
+﻿---
+ID: "804ea448-f33c-4ddb-90e3-5e64b68de9a8"
+Parent: "54e1455e-bef8-4e01-a5bd-0f638d3938b8"
+Template: "54e1455e-bef8-4e01-a5bd-0f638d3938b8"
+Path: /sitecore/templates/Feature/SF/PushNotifications/Configuration Templates/Push Notification Configuration/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1fa3807d-9d2e-46c8-94cc-3e3acead64d3"
+      Hint: Public Key
+      Value: "BKMXsUFMQ9qjmnclNA_lkf2w-76peeLNQfFO8z4nncDZuWjxoZVcuyTHYkj7MLj697PkJeKHWhNvfdifxUXeMBQ"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200401T152530Z
+    - ID: "5ccd6304-c9b6-44de-b93d-a659fbde5a56"
+      Hint: mailto
+      Value: "mailto:<someone@example.com>"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "996c8d89-1f45-422d-a345-8894b33eff57"
+      Hint: Private Key
+      Value: "wxY_dUoZjy8--DukNlbN0XYLVpzSiU11z0D7lwZ7wpw"

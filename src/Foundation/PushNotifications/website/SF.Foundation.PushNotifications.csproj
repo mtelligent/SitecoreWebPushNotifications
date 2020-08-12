@@ -178,6 +178,9 @@
   <ItemGroup>
     <Content Include="App_Config\Include\Foundation\Foundation.PushNotifications.config" />
     <Content Include="SendPushNotificationsPlugin\webpack.config.js" />
+    <Content Include="App_Config\Include\Foundation\Foundation.PushNotifications.Serialization.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="packages.config" />
     <Content Include="SendPushNotificationsPlugin\package.json" />
     <Content Include="SendPushNotificationsPlugin\src\tsconfig.aot.json" />

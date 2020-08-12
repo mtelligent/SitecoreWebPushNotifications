@@ -1,0 +1,14 @@
+﻿---
+ID: "e5512868-ab37-4560-9585-b848640e16f8"
+Parent: "52a136e7-996b-4fe8-9e63-a93861ee669a"
+Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
+Path: /sitecore/templates/Feature/SF/PushNotifications
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200401T151825Z

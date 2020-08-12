@@ -136,6 +136,9 @@
     <Content Include="content\Feature\PushNotifications\SubscribeButton.js" />
     <Content Include="Views\SubscribeButton\Subscribe Button.cshtml" />
     <Content Include="App_Config\Include\Feature\PushNotfiications.SXA.config" />
+    <Content Include="App_Config\Include\Feature\PushNotifications.SXA.Serialization.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Views\Web.config" />
     <None Include="Web.config" />
   </ItemGroup>

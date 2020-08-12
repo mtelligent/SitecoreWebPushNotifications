@@ -1,0 +1,21 @@
+﻿---
+ID: "147c2966-6423-4f4b-b4cb-c0dc32ef8a75"
+Parent: "be5414ed-7b78-4b0e-9a46-49e1c81a3b38"
+Template: "7c02e9f5-54b5-4ef4-bd10-f4c5d448a48c"
+Path: /sitecore/templates/Branches/Feature/SF/PushNotifications/Subscribe Button Variants/$name/Default/Subscribe
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "07211f80-7ffc-4df4-a4de-c8956f391850"
+      Hint: Text
+      Value: Subscribe
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200409T184909Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
