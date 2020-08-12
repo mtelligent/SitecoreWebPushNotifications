@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "removeComments": true,
+    "sourceMap": true,
+    "outDir": "./codegen",
+    "rootDir": "./",
+    "declaration": true,
+    "lib": [
+      "es2016",
+      "dom"
+    ],
+    "baseUrl": ""
+  }
+}

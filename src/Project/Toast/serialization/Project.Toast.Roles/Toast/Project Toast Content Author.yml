@@ -1,0 +1,8 @@
+---
+Role: |
+  Toast\Project Toast Content Author
+MemberOf:
+  Role: |
+    sitecore\Author
+  Role: |
+    sitecore\Designer

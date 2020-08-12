@@ -1,0 +1,26 @@
+﻿@using Sitecore.Extensions
+@using Sitecore.XA.Foundation.MarkupDecorator.Extensions
+@using Sitecore.XA.Foundation.SitecoreExtensions.Extensions
+@using Sitecore.XA.Foundation.RenderingVariants.Extensions
+@using Sitecore.XA.Foundation.RenderingVariants.Fields
+@using Sitecore.XA.Foundation.Variants.Abstractions.Fields
+
+@model SF.Feature.PushNotifications.SXA.Models.SubscribeButtonModel
+
+@{ 
+    var dataAttr = new System.Text.StringBuilder();
+    if (Model.GoalId != Guid.Empty)
+    {
+        dataAttr.Append(@" data-goalId=").Append(Model.GoalId);
+    }
+   
+}
+
+<div @Html.Sxa().Component("subscribe-button", Model.Attributes) data-publicKey="@Model.PublicKey" @dataAttr.ToString()>
+    <div class="component-content">
+        @foreach (BaseVariantField variantField in Model.VariantFields)
+        {
+            @Html.RenderingVariants().RenderVariant(variantField, Model.Item, Model.RenderingWebEditingParams)
+        }
+    </div>
+</div>

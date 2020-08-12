@@ -1,0 +1,19 @@
+version: 0.0.{build}
+skip_branch_with_pr: true
+image: Visual Studio 2017
+configuration: Release
+before_build:
+  - nuget restore
+build:
+  project: Toast.sln
+  parallel: true
+  verbosity: minimal
+test:
+  assemblies:
+    only:
+    - '**\*Tests.dll'
+after_test:
+- ps: msbuild.exe Toast.sln /m /verbosity:minimal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /t:Website\Toast_Website:WebPublish /p:PublishProfile=Package /p:Configuration=Release /p:DefaultPackageOutputDir="$($Env:APPVEYOR_BUILD_FOLDER)/artifacts"
+artifacts:
+- path: artifacts\Toast.Website.zip
+  name: wdp

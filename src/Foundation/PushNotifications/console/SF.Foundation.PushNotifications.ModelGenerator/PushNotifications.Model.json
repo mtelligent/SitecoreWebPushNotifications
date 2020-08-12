@@ -1,0 +1,46 @@
+{
+  "Name": "PushSubscriptionsModel",
+  "Version": "1.0",
+  "References": [
+    {
+      "Name": "XConnect",
+      "Version": "1.0"
+    }
+  ],
+  "Types": {
+    "SF.Foundation.PushNotifications.Facets.PushSubscription": {
+      "Type": "Facet",
+      "BaseType": "Sitecore.XConnect.Facet",
+      "ClrType": "SF.Foundation.PushNotifications.Facets.PushSubscription, SF.Foundation.PushNotifications, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {
+        "Endpoint": {
+          "Type": "String"
+        },
+        "Keys": {
+          "Type": {
+            "String": "String"
+          }
+        }
+      }
+    },
+    "SF.Foundation.PushNotifications.Facets.PushSubscriptions": {
+      "Type": "Facet",
+      "BaseType": "Sitecore.XConnect.Facet",
+      "ClrType": "SF.Foundation.PushNotifications.Facets.PushSubscriptions, SF.Foundation.PushNotifications, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {
+        "Subscriptions": {
+          "Type": {
+            "Guid": "SF.Foundation.PushNotifications.Facets.PushSubscription"
+          }
+        }
+      }
+    }
+  },
+  "Facets": [
+    {
+      "Target": "Contact",
+      "Name": "PushSubscriptions",
+      "Type": "SF.Foundation.PushNotifications.Facets.PushSubscriptions"
+    }
+  ]
+}

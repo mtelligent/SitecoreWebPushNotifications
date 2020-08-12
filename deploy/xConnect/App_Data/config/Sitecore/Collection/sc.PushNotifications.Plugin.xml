@@ -1,0 +1,15 @@
+﻿<Settings>
+  <Sitecore>
+    <XConnect>
+      <Collection>
+        <Services>
+          <IContactMergeHandler.MergeTestCombinationsHandler>
+            <Type>SF.Foundation.PushNotifications.Facets.MergePushSubscriptionsHandler, SF.Foundation.PushNotifications</Type>
+            <As>Sitecore.XConnect.Service.IContactMergeHandler, Sitecore.XConnect.Service</As>
+            <LifeTime>Singleton</LifeTime>
+          </IContactMergeHandler.MergeTestCombinationsHandler>
+        </Services>
+      </Collection>
+    </XConnect>
+  </Sitecore>
+</Settings>

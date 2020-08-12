@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+  <!--
+    Marketing Automation contact loader configuration
+  -->
+  <Sitecore>
+    <XConnect>
+      <MarketingAutomation>
+        <Engine>
+          <Services>
+            <!-- The contact loader which loads contacts and interactions from XConnect -->
+            <MarketingAutomation.Loading.ContactLoader>
+              <Type>Sitecore.Xdb.MarketingAutomation.Loading.ContactLoader, Sitecore.Xdb.MarketingAutomation</Type>
+              <As>Sitecore.Xdb.MarketingAutomation.Core.Loading.IContactLoader, Sitecore.Xdb.MarketingAutomation.Core</As>
+              <LifeTime>Scoped</LifeTime>
+            </MarketingAutomation.Loading.ContactLoader>
+            <!-- The Xdb loader which asynchronously loads contacts and interactions from XConnect -->
+            <MarketingAutomation.Loading.AsyncXdbLoader>
+              <Type>Sitecore.Xdb.MarketingAutomation.Loading.AsyncXdbLoader, Sitecore.Xdb.MarketingAutomation</Type>
+              <As>Sitecore.Xdb.MarketingAutomation.Loading.IAsyncXdbLoader, Sitecore.Xdb.MarketingAutomation</As>
+              <LifeTime>Scoped</LifeTime>
+            </MarketingAutomation.Loading.AsyncXdbLoader>
+            <!-- Load a fixed duration of previous interactions for the contact -->
+            <MarketingAutomation.Loading.FixedHistoryConfigurator>
+              <Type>Sitecore.Xdb.MarketingAutomation.Loading.FixedHistoryConfigurator, Sitecore.Xdb.MarketingAutomation</Type>
+              <As>Sitecore.Xdb.MarketingAutomation.Core.Loading.IContactExpandOptionsConfigurator, Sitecore.Xdb.MarketingAutomation.Core</As>
+              <LifeTime>Singleton</LifeTime>
+              <Options>
+                <MaximumAge>30.00:00:00</MaximumAge>
+              </Options>
+            </MarketingAutomation.Loading.FixedHistoryConfigurator>
+            <!-- Include or exclude contact facets for the contact during loading -->
+            <MarketingAutomation.Loading.ContactFacetsConfigurator>
+              <Type>Sitecore.Xdb.MarketingAutomation.Loading.ContactFacetsConfigurator, Sitecore.Xdb.MarketingAutomation</Type>
+              <As>Sitecore.Xdb.MarketingAutomation.Core.Loading.IContactExpandOptionsConfigurator, Sitecore.Xdb.MarketingAutomation.Core</As>
+              <LifeTime>Singleton</LifeTime>
+              <Options>
+                <IncludeFacetNames>
+                  <Addresses>Addresses</Addresses>
+                  <ConsentInformation>ConsentInformation</ConsentInformation>
+                  <Emails>Emails</Emails>
+                  <EngagementMeasures>EngagementMeasures</EngagementMeasures>
+                  <ListSubscriptions>ListSubscriptions</ListSubscriptions>
+                  <Personal>Personal</Personal>
+                  <InteractionsCache>InteractionsCache</InteractionsCache>
+                  <PushSubscriptions>PushSubscriptions</PushSubscriptions>
+                </IncludeFacetNames>
+                <!--
+                <ExcludeFacetNames>
+                  <Facet1>MyExcludeFacet</Facet1>
+                  <Facet2>MyExcludeFacet2</Facet2>
+                </ExcludeFacetNames>
+                -->
+              </Options>
+            </MarketingAutomation.Loading.ContactFacetsConfigurator>
+            <!-- Include or exclude interaction facets for the interactions during loading -->
+            <MarketingAutomation.Loading.InteractionFacetsConfigurator>
+              <Type>Sitecore.Xdb.MarketingAutomation.Loading.InteractionFacetsConfigurator, Sitecore.Xdb.MarketingAutomation</Type>
+              <As>Sitecore.Xdb.MarketingAutomation.Core.Loading.IContactExpandOptionsConfigurator, Sitecore.Xdb.MarketingAutomation.Core</As>
+              <LifeTime>Singleton</LifeTime>
+              <Options>
+                <IncludeFacetNames>
+                  <UserAgentInfo>UserAgentInfo</UserAgentInfo>
+                  <WebVisit>WebVisit</WebVisit>
+                  <IpInfo>IpInfo</IpInfo>
+                  <ProfileScores>ProfileScores</ProfileScores>
+                </IncludeFacetNames>
+                <!--
+                <ExcludeFacetNames>
+                  <Facet1>MyExcludeFacet</Facet1>
+                  <Facet2>MyExcludeFacet2</Facet2>
+                </ExcludeFacetNames>
+                -->
+              </Options>
+            </MarketingAutomation.Loading.InteractionFacetsConfigurator>
+          </Services>
+        </Engine>
+      </MarketingAutomation>
+    </XConnect>
+  </Sitecore>
+</Settings>

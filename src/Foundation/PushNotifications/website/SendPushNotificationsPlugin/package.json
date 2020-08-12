@@ -1,0 +1,32 @@
+{
+  "name": "sendpushnotificationsplugin",
+  "version": "1.0.0",
+  "description": "Marketing Activity to Send Web Push Notifications",
+  "main": "index.js",
+  "dependencies": {
+    "@sitecore/ma-core": "file:C:/inetpub/wwwroot/toast.sc.dev.local/sitecore/shell/client/Applications/MarketingAutomation/packages/ma-core",
+    "@angular/common": "5.2.11",
+    "@angular/compiler": "5.2.11",
+    "@angular/compiler-cli": "5.2.11",
+    "@angular/core": "5.2.11",
+    "@angular/forms": "5.2.11",
+    "@angular/http": "5.2.11",
+    "@angular/platform-browser": "5.2.11",
+    "@ngx-translate/core": "9.0.2",
+    "rxjs": "5.5.11",
+    "zone.js": "^0.8.4"
+  },
+  "devDependencies": {
+    "ts-loader": "4.4.2",
+    "typescript": "3.9.5",
+    "webpack": "4.43.0",
+    "webpack-cli": "3.3.11"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ngc -p ./src/tsconfig.aot.json",
+    "build": "webpack"
+  },
+  "author": "David San Filippo",
+  "license": "MIT"
+}

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+  <!--
+    Marketing Automation Activity Services configuration
+  -->
+  <Sitecore>
+    <XConnect>
+      <MarketingAutomation>
+        <Engine>
+          <Services>
+            <SF.Foundation.PushNotifications.Services.PushNotificationService>
+              <Type>SF.Foundation.PushNotifications.Services.PushNotificationService, SF.Foundation.PushNotifications</Type>
+              <As>SF.Foundation.PushNotifications.Services.IPushNotificationService, SF.Foundation.PushNotifications</As>
+              <LifeTime>Singleton</LifeTime>
+            </SF.Foundation.PushNotifications.Services.PushNotificationService>
+          </Services>
+        </Engine>
+      </MarketingAutomation>
+    </XConnect>
+  </Sitecore>
+</Settings>

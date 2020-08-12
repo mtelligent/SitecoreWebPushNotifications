@@ -1,0 +1,359 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Lib.Net.Http.WebPush</name>
+    </assembly>
+    <members>
+        <member name="T:Lib.Net.Http.WebPush.Authentication.IVapidTokenCache">
+            <summary>
+            Represents cache for <see cref="T:Lib.Net.Http.WebPush.Authentication.VapidAuthentication"/> tokens.
+            </summary>
+        </member>
+        <member name="M:Lib.Net.Http.WebPush.Authentication.IVapidTokenCache.Put(System.String,System.DateTimeOffset,System.String)">
+            <summary>
+            Puts token into cache.
+            </summary>
+            <param name="audience">The origin of the push resource (cache key).</param>
+            <param name="expiration">The token expiration.</param>
+            <param name="token">The token.</param>
+        </member>
+        <member name="M:Lib.Net.Http.WebPush.Authentication.IVapidTokenCache.Get(System.String)">
+            <summary>
+            Gets token from cache.
+            </summary>
+            <param name="audience">The origin of the push resource (cache key).</param>
+            <returns>The cached token or null if token was not present in cache.</returns>
+        </member>
+        <member name="T:Lib.Net.Http.WebPush.Authentication.VapidAuthentication">
+            <summary>
+            Class which provides Voluntary Application Server Identification (VAPID) headers values.
+            </summary>
+        </member>
+        <member name="T:Lib.Net.Http.WebPush.Authentication.VapidAuthentication.WebPushSchemeHeadersValues">
+            <summary>
+            Structure providing values for headers used in case of <see cref="F:Lib.Net.Http.WebPush.Authentication.VapidAuthenticationScheme.WebPush"/>.
+            </summary>
+        </member>
+        <member name="P:Lib.Net.Http.WebPush.Authentication.VapidAuthentication.WebPushSchemeHeadersValues.AuthenticationHeaderValueParameter">
+            <summary>
+            Gets the <see cref="T:System.Net.Http.Headers.AuthenticationHeaderValue"/> parameter.
+            </summary>
+        </member>
+        <member name="P:Lib.Net.Http.WebPush.Authentication.VapidAuthentication.WebPushSchemeHeadersValues.CryptoKeyHeaderValue">
+            <summary>
+            Gets the Crypto-Key header value.
+            </summary>
+        </member>
+        <member name="P:Lib.Net.Http.WebPush.Authentication.VapidAuthentication.Subject">
+            <summary>
+            Gets or sets the contact information for the application server.
+            </summary>
+        </member>
+        <member name="P:Lib.Net.Http.WebPush.Authentication.VapidAuthentication.PublicKey">
+            <summary>
+            Gets or sets the Application Server Public Key.
+            </summary>
+        </member>
+        <member name="P:Lib.Net.Http.WebPush.Authentication.VapidAuthentication.PrivateKey">
+            <summary>
+            Gets or sets the Application Server Private Key.
+            </summary>
+        </member>
+        <member name="P:Lib.Net.Http.WebPush.Authentication.VapidAuthentication.Expiration">
+            <summary>
+            Gets or sets the time after which the authentication token expires (in seconds).
+            </summary>
+        </member>
+        <member name="P:Lib.Net.Http.WebPush.Authentication.VapidAuthentication.TokenCache">
+            <summary>
+            Gets or sets the token cache.
+            </summary>
+        </member>
+        <member name="M:Lib.Net.Http.WebPush.Authentication.VapidAuthentication.#ctor(System.String,System.String)">
+            <summary>
+            Creates new instance of <see cref="T:Lib.Net.Http.WebPush.Authentication.VapidAuthentication"/> class.
+            </summary>
+            <param name="publicKey">The Application Server Public Key.</param>
+            <param name="privateKey">The Application Server Private Key.</param>
+        </member>
+        <member name="M:Lib.Net.Http.WebPush.Authentication.VapidAuthentication.GetVapidSchemeAuthenticationHeaderValueParameter(System.String)">
+            <summary>
+            Gets <see cref="T:System.Net.Http.Headers.AuthenticationHeaderValue"/> parameter for <see cref="F:Lib.Net.Http.WebPush.Authentication.VapidAuthenticationScheme.Vapid"/>.
+            </summary>
+            <param name="audience">The origin of the push resource.</param>
+            <returns>The <see cref="T:System.Net.Http.Headers.AuthenticationHeaderValue"/> parameter for <see cref="F:Lib.Net.Http.WebPush.Authentication.VapidAuthenticationScheme.Vapid"/>.</returns>
+        </member>
+        <member name="M:Lib.Net.Http.WebPush.Authentication.VapidAuthentication.GetWebPushSchemeHeadersValues(System.String)">
+            <summary>
+            Gets values for headers used in case of <see cref="F:Lib.Net.Http.WebPush.Authentication.VapidAuthenticationScheme.WebPush"/>.
+            </summary>
+            <param name="audience">The origin of the push resource.</param>
+            <returns>The values for headers used in case of <see cref="F:Lib.Net.Http.WebPush.Authentication.VapidAuthenticationScheme.WebPush"/>.</returns>
+        </member>
+        <member name="T:Lib.Net.Http.WebPush.Authentication.VapidAuthenticationScheme">
+            <summary>
+            Voluntary Application Server Identification (VAPID) HTTP authentication schemes.
+            </summary>
+        </member>
+        <member name="F:Lib.Net.Http.WebPush.Authentication.VapidAuthenticationScheme.WebPush">
+            <summary>
+            The "WebPush" HTTP authentication scheme.
+            </summary>
+        </member>
+        <member name="F:Lib.Net.Http.WebPush.Authentication.VapidAuthenticationScheme.Vapid">
+            <summary>
+            The "vapid" HTTP authentication scheme.
+            </summary>
+        </member>
+        <member name="T:Lib.Net.Http.WebPush.PushEncryptionKeyName">
+            <summary>
+            The client keys shared as part of subscription.
+            </summary>
+        </member>
+        <member name="F:Lib.Net.Http.WebPush.PushEncryptionKeyName.P256DH">
+            <summary>
+            The client P-256 public key for use in ECDH.
+            </summary>
+        </member>
+        <member name="F:Lib.Net.Http.WebPush.PushEncryptionKeyName.Auth">
+            <summary>
+            The client authentication secret.
+            </summary>
+        </member>
+        <member name="T:Lib.Net.Http.WebPush.PushMessage">
+            <summary>
+            Class representing a push message.
+            </summary>
+        </member>
+        <member name="P:Lib.Net.Http.WebPush.PushMessage.Topic">
+            <summary>
+            Gets or sets the topic (used to correlate messages sent to the same subscription).
+            </summary>
+        </member>
+        <member name="P:Lib.Net.Http.WebPush.PushMessage.Content">
+            <summary>
+            Gets or sets the content when a <see cref="T:Lib.Net.Http.WebPush.PushMessage"/> instance has been instantiated through <see cref="M:Lib.Net.Http.WebPush.PushMessage.#ctor(System.String)"/>.
+            </summary>
+        </member>
+        <member name="P:Lib.Net.Http.WebPush.PushMessage.HttpContent">
+            <summary>
+            Gets or sets the content.
+            </summary>
+        </member>
+        <member name="P:Lib.Net.Http.WebPush.PushMessage.TimeToLive">
+            <summary>
+            Gets or sets the time (in seconds) for which the message should be retained by push service.
+            </summary>
+        </member>
+        <member name="P:Lib.Net.Http.WebPush.PushMessage.Urgency">
+            <summary>
+            Gets or sets the message urgency.
+            </summary>
+        </member>
+        <member name="M:Lib.Net.Http.WebPush.PushMessage.#ctor(System.String)">
+            <summary>
+            Creates new instance of <see cref="T:Lib.Net.Http.WebPush.PushMessage"/> class.
+            </summary>
+            <param name="content">The content.</param>
+        </member>
+        <member name="M:Lib.Net.Http.WebPush.PushMessage.#ctor(System.Net.Http.HttpContent)">
+            <summary>
+            Creates new instance of <see cref="T:Lib.Net.Http.WebPush.PushMessage"/> class.
+            </summary>
+            <param name="content">The content.</param>
+        </member>
+        <member name="T:Lib.Net.Http.WebPush.PushMessageUrgency">
+            <summary>
+            The push message urgency.
+            </summary>
+        </member>
+        <member name="F:Lib.Net.Http.WebPush.PushMessageUrgency.VeryLow">
+            <summary>
+            Very low (e.g. advertisements).
+            </summary>
+        </member>
+        <member name="F:Lib.Net.Http.WebPush.PushMessageUrgency.Low">
+            <summary>
+            Low (e.g. topic updates).
+            </summary>
+        </member>
+        <member name="F:Lib.Net.Http.WebPush.PushMessageUrgency.Normal">
+            <summary>
+            Normal (e.g. chat message).
+            </summary>
+        </member>
+        <member name="F:Lib.Net.Http.WebPush.PushMessageUrgency.High">
+            <summary>
+            High (e.g. time-sensitive alert).
+            </summary>
+        </member>
+        <member name="T:Lib.Net.Http.WebPush.PushServiceClient">
+            <summary>
+            A Web Push Protocol compliant client for push service.
+            </summary>
+            <remarks>
+            The <see cref="T:Lib.Net.Http.WebPush.PushServiceClient"/> should be considered an expensive object as it internally holds an instance of <see cref="T:System.Net.Http.HttpClient"/> class. In order to avoid Improper Instantiation antipattern a shared singleton instance should be created or a pool of reusable instances should be used.
+            </remarks>
+        </member>
+        <member name="P:Lib.Net.Http.WebPush.PushServiceClient.AutoRetryAfter">
+            <summary>
+            Gets or sets the value indicating if client should automatically attempt to retry in case of 429 Too Many Requests.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Lib.Net.Http.WebPush.PushServiceClient.MaxRetriesAfter" -->
+        <member name="P:Lib.Net.Http.WebPush.PushServiceClient.DefaultTimeToLive">
+            <summary>
+            Gets or sets the default time (in seconds) for which the message should be retained by push service. It will be used when <see cref="P:Lib.Net.Http.WebPush.PushMessage.TimeToLive"/> is not set.
+            </summary>
+        </member>
+        <member name="P:Lib.Net.Http.WebPush.PushServiceClient.DefaultAuthentication">
+            <summary>
+            Gets or sets the default authentication details.
+            </summary>
+        </member>
+        <member name="P:Lib.Net.Http.WebPush.PushServiceClient.DefaultAuthenticationScheme">
+            <summary>
+            Gets or sets the default <see cref="T:Lib.Net.Http.WebPush.Authentication.VapidAuthenticationScheme"/> to be used.
+            </summary>
+        </member>
+        <member name="M:Lib.Net.Http.WebPush.PushServiceClient.#ctor">
+            <summary>
+            Creates new instance of <see cref="T:Lib.Net.Http.WebPush.PushServiceClient"/> class.
+            </summary>
+        </member>
+        <member name="M:Lib.Net.Http.WebPush.PushServiceClient.#ctor(System.Net.Http.HttpClient)">
+            <summary>
+            Creates new instance of <see cref="T:Lib.Net.Http.WebPush.PushServiceClient"/> class.
+            </summary>
+            <param name="httpClient">The HttpClient instance.</param>
+        </member>
+        <member name="M:Lib.Net.Http.WebPush.PushServiceClient.RequestPushMessageDeliveryAsync(Lib.Net.Http.WebPush.PushSubscription,Lib.Net.Http.WebPush.PushMessage)">
+            <summary>
+            Requests delivery of push message by push service as an asynchronous operation.
+            </summary>
+            <param name="subscription">The push service subscription.</param>
+            <param name="message">The push message.</param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Lib.Net.Http.WebPush.PushServiceClient.RequestPushMessageDeliveryAsync(Lib.Net.Http.WebPush.PushSubscription,Lib.Net.Http.WebPush.PushMessage,System.Threading.CancellationToken)">
+            <summary>
+            Requests delivery of push message by push service as an asynchronous operation.
+            </summary>
+            <param name="subscription">The push service subscription.</param>
+            <param name="message">The push message.</param>
+            <param name="cancellationToken">The cancellation token to cancel operation.</param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Lib.Net.Http.WebPush.PushServiceClient.RequestPushMessageDeliveryAsync(Lib.Net.Http.WebPush.PushSubscription,Lib.Net.Http.WebPush.PushMessage,Lib.Net.Http.WebPush.Authentication.VapidAuthentication)">
+            <summary>
+            Requests delivery of push message by push service as an asynchronous operation.
+            </summary>
+            <param name="subscription">The push service subscription.</param>
+            <param name="message">The push message.</param>
+            <param name="authentication">The authentication details.</param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Lib.Net.Http.WebPush.PushServiceClient.RequestPushMessageDeliveryAsync(Lib.Net.Http.WebPush.PushSubscription,Lib.Net.Http.WebPush.PushMessage,Lib.Net.Http.WebPush.Authentication.VapidAuthentication,Lib.Net.Http.WebPush.Authentication.VapidAuthenticationScheme)">
+            <summary>
+            Requests delivery of push message by push service as an asynchronous operation.
+            </summary>
+            <param name="subscription">The push service subscription.</param>
+            <param name="message">The push message.</param>
+            <param name="authentication">The authentication details.</param>
+            <param name="authenticationScheme">The <see cref="T:Lib.Net.Http.WebPush.Authentication.VapidAuthenticationScheme"/> to use.</param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Lib.Net.Http.WebPush.PushServiceClient.RequestPushMessageDeliveryAsync(Lib.Net.Http.WebPush.PushSubscription,Lib.Net.Http.WebPush.PushMessage,Lib.Net.Http.WebPush.Authentication.VapidAuthentication,System.Threading.CancellationToken)">
+            <summary>
+            Requests delivery of push message by push service as an asynchronous operation.
+            </summary>
+            <param name="subscription">The push service subscription.</param>
+            <param name="message">The push message.</param>
+            <param name="authentication">The authentication details.</param>
+            <param name="cancellationToken">The cancellation token to cancel operation.</param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Lib.Net.Http.WebPush.PushServiceClient.RequestPushMessageDeliveryAsync(Lib.Net.Http.WebPush.PushSubscription,Lib.Net.Http.WebPush.PushMessage,Lib.Net.Http.WebPush.Authentication.VapidAuthentication,Lib.Net.Http.WebPush.Authentication.VapidAuthenticationScheme,System.Threading.CancellationToken)">
+            <summary>
+            Requests delivery of push message by push service as an asynchronous operation.
+            </summary>
+            <param name="subscription">The push service subscription.</param>
+            <param name="message">The push message.</param>
+            <param name="authentication">The authentication details.</param>
+            <param name="authenticationScheme">The <see cref="T:Lib.Net.Http.WebPush.Authentication.VapidAuthenticationScheme"/> to use.</param>
+            <param name="cancellationToken">The cancellation token to cancel operation.</param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="T:Lib.Net.Http.WebPush.PushServiceClientException">
+            <summary>
+            An exception representing requesting <see cref="T:Lib.Net.Http.WebPush.PushMessage"/> delivery failure based on push service response.
+            </summary>
+        </member>
+        <member name="P:Lib.Net.Http.WebPush.PushServiceClientException.StatusCode">
+            <summary>
+            Gets the status code of the push service response.
+            </summary>
+        </member>
+        <member name="P:Lib.Net.Http.WebPush.PushServiceClientException.Headers">
+            <summary>
+            Gets the headers of the push service response.
+            </summary>
+        </member>
+        <member name="P:Lib.Net.Http.WebPush.PushServiceClientException.Body">
+            <summary>
+            Gets the body of the push service response.
+            </summary>
+        </member>
+        <member name="P:Lib.Net.Http.WebPush.PushServiceClientException.PushSubscription">
+            <summary>
+            Gets the <see cref="T:Lib.Net.Http.WebPush.PushSubscription"/> that initiated the push service request.
+            </summary>
+        </member>
+        <member name="M:Lib.Net.Http.WebPush.PushServiceClientException.#ctor(System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Creates new instance of <see cref="T:Lib.Net.Http.WebPush.PushServiceClientException"/> class.
+            </summary>
+            <param name="message">The message that describes the current exception.</param>
+            <param name="statusCode">The status code of the push service response.</param>
+        </member>
+        <member name="M:Lib.Net.Http.WebPush.PushServiceClientException.#ctor(System.String,System.Net.HttpStatusCode,System.Net.Http.Headers.HttpResponseHeaders,System.String,Lib.Net.Http.WebPush.PushSubscription)">
+            <summary>
+            Creates new instance of <see cref="T:Lib.Net.Http.WebPush.PushServiceClientException"/> class.
+            </summary>
+            <param name="message">The message that describes the current exception.</param>
+            <param name="statusCode">The status code of the push service response.</param>
+            <param name="headers">The headers of the push service response.</param>
+            <param name="body">The body of the push service response.</param>
+            <param name="pushSubscription">The <see cref="T:Lib.Net.Http.WebPush.PushSubscription"/> that initiated the push service request.</param>
+        </member>
+        <member name="T:Lib.Net.Http.WebPush.PushSubscription">
+            <summary>
+            Class representing a push subscription
+            </summary>
+        </member>
+        <member name="P:Lib.Net.Http.WebPush.PushSubscription.Endpoint">
+            <summary>
+            Gets or sets the subscription endpoint.
+            </summary>
+        </member>
+        <member name="P:Lib.Net.Http.WebPush.PushSubscription.Keys">
+            <summary>
+            Gets or sets client keys shared as part of subscription.
+            </summary>
+        </member>
+        <member name="M:Lib.Net.Http.WebPush.PushSubscription.GetKey(Lib.Net.Http.WebPush.PushEncryptionKeyName)">
+            <summary>
+            Gets specific client key shared as part of subscription.
+            </summary>
+            <param name="keyName">The key name.</param>
+            <returns>The key.</returns>
+        </member>
+        <member name="M:Lib.Net.Http.WebPush.PushSubscription.SetKey(Lib.Net.Http.WebPush.PushEncryptionKeyName,System.String)">
+            <summary>
+            Sets specific client key shared as part of subscription.
+            </summary>
+            <param name="keyName">The key name.</param>
+            <param name="key">The key.</param>
+        </member>
+    </members>
+</doc>
