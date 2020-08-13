@@ -1,0 +1,276 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Lib.Net.Http.EncryptedContentEncoding</name>
+    </assembly>
+    <members>
+        <member name="T:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmDecodedContent">
+            <summary>
+            A class representing an HTTP entity body decoded with aes128gcm encoding.
+            </summary>
+        </member>
+        <member name="M:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmDecodedContent.#ctor(System.Net.Http.HttpContent,System.Func{System.String,System.Byte[]})">
+            <summary>
+            Instantiates a new <see cref="T:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmDecodedContent"/>.
+            </summary>
+            <param name="contentToBeDecrypted">The content which will be decoded.</param>
+            <param name="keyProvider">The function which is able to provide the keying material based on the keying material identificator.</param>
+        </member>
+        <member name="M:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmDecodedContent.#ctor(System.Net.Http.HttpContent,System.Func{System.Byte[],System.Byte[]})">
+            <summary>
+            Instantiates a new <see cref="T:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmDecodedContent"/>.
+            </summary>
+            <param name="contentToBeDecrypted">The content which will be decoded.</param>
+            <param name="keyProvider">The function which is able to provide the keying material based on the keying material identificator.</param>
+        </member>
+        <member name="M:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmDecodedContent.SerializeToStreamAsync(System.IO.Stream,System.Net.TransportContext)">
+            <summary>
+            Serialize the HTTP content to a stream as an asynchronous operation.
+            </summary>
+            <param name="stream">The target stream.</param>
+            <param name="context">Information about the transport (channel binding token, for example). This parameter may be null.</param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmDecodedContent.TryComputeLength(System.Int64@)">
+            <summary>
+            Determines whether the HTTP content has a valid length in bytes.
+            </summary>
+            <param name="length">The length in bytes of the HTTP content.</param>
+            <returns>True if length is a valid length, otherwise false.</returns>
+        </member>
+        <member name="T:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncodedContent">
+            <summary>
+            A class representing an HTTP entity body encoded with aes128gcm encoding.
+            </summary>
+        </member>
+        <member name="M:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncodedContent.#ctor(System.Net.Http.HttpContent,System.Byte[])">
+            <summary>
+            Instantiates a new <see cref="T:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncodedContent"/>.
+            </summary>
+            <param name="contentToBeEncrypted">The content which will be encoded.</param>
+            <param name="key">The keying material.</param>
+        </member>
+        <member name="M:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncodedContent.#ctor(System.Net.Http.HttpContent,System.Byte[],System.String)">
+            <summary>
+            Instantiates a new <see cref="T:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncodedContent"/>.
+            </summary>
+            <param name="contentToBeEncrypted">The content which will be encoded.</param>
+            <param name="key">The keying material.</param>
+            <param name="keyId">The keying material identificator.</param>
+        </member>
+        <member name="M:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncodedContent.#ctor(System.Net.Http.HttpContent,System.Byte[],System.Byte[])">
+            <summary>
+            Instantiates a new <see cref="T:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncodedContent"/>.
+            </summary>
+            <param name="contentToBeEncrypted">The content which will be encoded.</param>
+            <param name="key">The keying material.</param>
+            <param name="keyId">The keying material identificator.</param>
+        </member>
+        <member name="M:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncodedContent.#ctor(System.Net.Http.HttpContent,System.Byte[],System.Int32)">
+            <summary>
+            Instantiates a new <see cref="T:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncodedContent"/>.
+            </summary>
+            <param name="contentToBeEncrypted">The content which will be encoded.</param>
+            <param name="key">The keying material.</param>
+            <param name="recordSize">The record size in octets.</param>
+        </member>
+        <member name="M:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncodedContent.#ctor(System.Net.Http.HttpContent,System.Byte[],System.String,System.Int32)">
+            <summary>
+            Instantiates a new <see cref="T:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncodedContent"/>.
+            </summary>
+            <param name="contentToBeEncrypted">The content which will be encoded.</param>
+            <param name="key">The keying material.</param>
+            <param name="keyId">The keying material identificator.</param>
+            <param name="recordSize">The record size in octets.</param>
+        </member>
+        <member name="M:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncodedContent.#ctor(System.Net.Http.HttpContent,System.Byte[],System.Byte[],System.Int32)">
+            <summary>
+            Instantiates a new <see cref="T:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncodedContent"/>.
+            </summary>
+            <param name="contentToBeEncrypted">The content which will be encoded.</param>
+            <param name="key">The keying material.</param>
+            <param name="keyId">The keying material identificator.</param>
+            <param name="recordSize">The record size in octets.</param>
+        </member>
+        <member name="M:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncodedContent.SerializeToStreamAsync(System.IO.Stream,System.Net.TransportContext)">
+            <summary>
+            Serialize the HTTP content to a stream as an asynchronous operation.
+            </summary>
+            <param name="stream">The target stream.</param>
+            <param name="context">Information about the transport (channel binding token, for example). This parameter may be null.</param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncodedContent.TryComputeLength(System.Int64@)">
+            <summary>
+            Determines whether the HTTP content has a valid length in bytes.
+            </summary>
+            <param name="length">The length in bytes of the HTTP content.</param>
+            <returns>True if length is a valid length, otherwise false.</returns>
+        </member>
+        <member name="T:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncoding">
+            <summary>
+            Provides aes128gcm encoding and decoding routines.
+            </summary>
+        </member>
+        <member name="M:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncoding.EncodeAsync(System.IO.Stream,System.IO.Stream,System.Byte[])">
+            <summary>
+            Encodes source stream into destionation stream as an asynchronous operation.
+            </summary>
+            <param name="source">The source stream.</param>
+            <param name="destination">The destionation stream.</param>
+            <param name="key">The keying material.</param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncoding.ComputeEncodedLength(System.Int64)">
+            <summary>
+            Computes encoded length.
+            </summary>
+            <param name="sourceLength">The source length.</param>
+            <returns>The encoded length.</returns>
+        </member>
+        <member name="M:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncoding.EncodeAsync(System.IO.Stream,System.IO.Stream,System.Byte[],System.String)">
+            <summary>
+            Encodes source stream into destionation stream as an asynchronous operation.
+            </summary>
+            <param name="source">The source stream.</param>
+            <param name="destination">The destionation stream.</param>
+            <param name="key">The keying material.</param>
+            <param name="keyId">The keying material identificator.</param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncoding.EncodeAsync(System.IO.Stream,System.IO.Stream,System.Byte[],System.Byte[])">
+            <summary>
+            Encodes source stream into destionation stream as an asynchronous operation.
+            </summary>
+            <param name="source">The source stream.</param>
+            <param name="destination">The destionation stream.</param>
+            <param name="key">The keying material.</param>
+            <param name="keyId">The keying material identificator.</param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncoding.ComputeEncodedLength(System.Int64,System.Byte)">
+            <summary>
+            Computes encoded length.
+            </summary>
+            <param name="sourceLength">The source length.</param>
+            <param name="keyIdLength">The keying material identificator length.</param>
+            <returns>The encoded length.</returns>
+        </member>
+        <member name="M:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncoding.EncodeAsync(System.IO.Stream,System.IO.Stream,System.Byte[],System.Int32)">
+            <summary>
+            Encodes source stream into destionation stream as an asynchronous operation.
+            </summary>
+            <param name="source">The source stream.</param>
+            <param name="destination">The destionation stream.</param>
+            <param name="key">The keying material.</param>
+            <param name="recordSize">The record size in octets.</param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncoding.ComputeEncodedLength(System.Int64,System.Int32)">
+            <summary>
+            Computes encoded length.
+            </summary>
+            <param name="sourceLength">The source length.</param>
+            <param name="recordSize">The records size in octets.</param>
+            <returns>The encoded length.</returns>
+        </member>
+        <member name="M:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncoding.EncodeAsync(System.IO.Stream,System.IO.Stream,System.Byte[],System.String,System.Int32)">
+            <summary>
+            Encodes source stream into destionation stream as an asynchronous operation.
+            </summary>
+            <param name="source">The source stream.</param>
+            <param name="destination">The destionation stream.</param>
+            <param name="key">The keying material.</param>
+            <param name="keyId">The keying material identificator.</param>
+            <param name="recordSize">The record size in octets.</param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncoding.EncodeAsync(System.IO.Stream,System.IO.Stream,System.Byte[],System.Byte[],System.Int32)">
+            <summary>
+            Encodes source stream into destionation stream as an asynchronous operation.
+            </summary>
+            <param name="source">The source stream.</param>
+            <param name="destination">The destionation stream.</param>
+            <param name="key">The keying material.</param>
+            <param name="keyId">The keying material identificator.</param>
+            <param name="recordSize">The record size in octets.</param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncoding.EncodeAsync(System.IO.Stream,System.IO.Stream,System.Byte[],System.Byte[],System.String,System.Int32)">
+            <summary>
+            Encodes source stream into destionation stream as an asynchronous operation.
+            </summary>
+            <param name="source">The source stream.</param>
+            <param name="destination">The destionation stream.</param>
+            <param name="salt">The salt.</param>
+            <param name="key">The keying material.</param>
+            <param name="keyId">The keying material identificator.</param>
+            <param name="recordSize">The record size in octets.</param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncoding.EncodeAsync(System.IO.Stream,System.IO.Stream,System.Byte[],System.Byte[],System.Byte[],System.Int32)">
+            <summary>
+            Encodes source stream into destionation stream as an asynchronous operation.
+            </summary>
+            <param name="source">The source stream.</param>
+            <param name="destination">The destionation stream.</param>
+            <param name="salt">The salt.</param>
+            <param name="key">The keying material.</param>
+            <param name="keyId">The keying material identificator.</param>
+            <param name="recordSize">The record size in octets.</param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncoding.ComputeEncodedLength(System.Int64,System.Byte,System.Int32)">
+            <summary>
+            Computes encoded length.
+            </summary>
+            <param name="sourceLength">The source length.</param>
+            <param name="keyIdLength">The keying material identificator length.</param>
+            <param name="recordSize">The records size in octets.</param>
+            <returns>The encoded length.</returns>
+        </member>
+        <member name="M:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncoding.DecodeAsync(System.IO.Stream,System.IO.Stream,System.Func{System.String,System.Byte[]})">
+            <summary>
+            Decodes source stream into destionation stream as an asynchronous operation.
+            </summary>
+            <param name="source">The source stream.</param>
+            <param name="destination">The destionation stream.</param>
+            <param name="keyProvider">The function which is able to provide the keying material based on the keying material identificator.</param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncoding.DecodeAsync(System.IO.Stream,System.IO.Stream,System.Func{System.Byte[],System.Byte[]})">
+            <summary>
+            Decodes source stream into destionation stream as an asynchronous operation.
+            </summary>
+            <param name="source">The source stream.</param>
+            <param name="destination">The destionation stream.</param>
+            <param name="keyProvider">The function which is able to provide the keying material based on the keying material identificator.</param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="T:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncodingHandler">
+            <summary>
+            The <see cref="T:System.Net.Http.DelegatingHandler"/> which wraps incoming response content in <see cref="T:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmDecodedContent"/> based on Content-Encoding header value and sets Accept-Encoding header for outgoing request.
+            </summary>
+        </member>
+        <member name="M:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncodingHandler.#ctor(System.Func{System.String,System.Byte[]})">
+            <summary>
+            Instantiates a new <see cref="T:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncodingHandler"/>.
+            </summary>
+            <param name="keyProvider">The function which is able to provide the keying material based on the keying material identificator.</param>
+        </member>
+        <member name="M:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncodingHandler.#ctor(System.Func{System.Byte[],System.Byte[]})">
+            <summary>
+            Instantiates a new <see cref="T:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncodingHandler"/>.
+            </summary>
+            <param name="keyProvider">The function which is able to provide the keying material based on the keying material identificator.</param>
+        </member>
+        <member name="M:Lib.Net.Http.EncryptedContentEncoding.Aes128GcmEncodingHandler.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)">
+            <summary>
+            Sends the request asynchronously.
+            </summary>
+            <param name="request">The request.</param>
+            <param name="cancellationToken">The cancelation token.</param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+    </members>
+</doc>

@@ -43,7 +43,7 @@ namespace SF.Foundation.PushNotifications.Activities
                 var subscriptions = context.Contact.GetFacet<PushSubscriptions>();
                 if (subscriptions == null)
                 {
-                    return new SuccessMove("Default");
+                    return new SuccessMove("default");
                 }
 
                 var notification = new Notification()
@@ -71,7 +71,7 @@ namespace SF.Foundation.PushNotifications.Activities
                     }
                 }
 
-                return new SuccessMove("Default");
+                return new SuccessMove("default");
 
             }
             catch (Exception ex)

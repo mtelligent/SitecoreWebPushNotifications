@@ -35,14 +35,50 @@ SF.PushNotfications = (function () {
     function subscribeUserToPush(publicKey) {
         return navigator.serviceWorker.register('/content/Feature/PushNotifications/service-worker.js')
             .then(function (registration) {
-                const subscribeOptions = {
+
+                var serviceWorker;
+                if (registration.installing) {
+                    serviceWorker = registration.installing;
+                    // console.log('Service worker installing');
+                } else if (registration.waiting) {
+                    serviceWorker = registration.waiting;
+                    // console.log('Service worker installed & waiting');
+                } else if (registration.active) {
+                    serviceWorker = registration.active;
+                    // console.log('Service worker active');
+                }
+
+                var subscribeOptions = {
                     userVisibleOnly: true,
                     applicationServerKey: urlBase64ToUint8Array(
                         publicKey
                     )
                 };
 
-                return registration.pushManager.subscribe(subscribeOptions);
+                if (serviceWorker.state == "activated") {
+                    //If push subscription wasnt done yet have to do here
+                    console.log("sw already activated - Do watever needed here");
+                    return registration.pushManager.subscribe(subscribeOptions);
+                }
+
+                serviceWorker.addEventListener("statechange", function (e) {
+                    console.log("sw statechange : ", e.target.state);
+                    if (e.target.state == "activated") {
+                        // use pushManger for subscribing here.
+                        var subscribeOptions = {
+                            userVisibleOnly: true,
+                            applicationServerKey: urlBase64ToUint8Array(
+                                publicKey
+                            )
+                        };
+
+                        console.log("Just now activated. now we can subscribe for push notification")
+                        var pushSubscription = registration.pushManager.subscribe(subscribeOptions);
+                        console.log('Received PushSubscription: ', JSON.stringify(pushSubscription));
+                    }
+                });
+
+                
             })
             .then(function (pushSubscription) {
                 console.log('Received PushSubscription: ', JSON.stringify(pushSubscription));

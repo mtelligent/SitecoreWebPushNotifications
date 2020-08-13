@@ -23,7 +23,18 @@ namespace SF.Foundation.PushNotifications.Services
 
                 var pushMessage = new PushMessage(message);
                 
-                webPushClient.RequestPushMessageDeliveryAsync(webSubscription, pushMessage, vapidAuth);
+                var task = webPushClient.RequestPushMessageDeliveryAsync(webSubscription, pushMessage, vapidAuth);
+                try
+                {
+                    task.Wait();
+                }
+                catch (AggregateException ae)
+                {
+                    foreach (var e in ae.InnerExceptions)
+                    {
+                        throw e;
+                    }
+                }
             }
             catch(Exception ex)
             {

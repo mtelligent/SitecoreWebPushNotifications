@@ -20,6 +20,12 @@
           "Type": {
             "String": "String"
           }
+        },
+        "VapidPublicKey": {
+          "Type": "String"
+        },
+        "VapidPrivateKey": {
+          "Type": "String"
         }
       }
     },

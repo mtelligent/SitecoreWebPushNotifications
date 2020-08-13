@@ -7,7 +7,7 @@ DB: master
 SharedFields:
 - ID: "ec7ee750-6c26-4def-aa5f-71dcd3a875de"
   Hint: Key
-  Value: Default
+  Value: default
 Languages:
 - Language: en
   Versions:
