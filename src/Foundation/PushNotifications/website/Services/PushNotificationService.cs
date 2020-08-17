@@ -12,34 +12,29 @@ namespace SF.Foundation.PushNotifications.Services
 
         public void SendNotification(Facets.PushSubscription subscription, string message, string publicKey, string privateKey)
         {
+
+            var webSubscription = new Lib.Net.Http.WebPush.PushSubscription();
+            webSubscription.Endpoint = subscription.Endpoint;
+            webSubscription.Keys = subscription.Keys;
+
+            //Need to make sure we're using right keys for subscription, maybe change to get for specific site.
+            var vapidAuth = new Lib.Net.Http.WebPush.Authentication.VapidAuthentication(publicKey, privateKey);
+
+            var pushMessage = new PushMessage(message);
+
+            var task = webPushClient.RequestPushMessageDeliveryAsync(webSubscription, pushMessage, vapidAuth);
             try
             {
-                var webSubscription = new Lib.Net.Http.WebPush.PushSubscription();
-                webSubscription.Endpoint = subscription.Endpoint;
-                webSubscription.Keys = subscription.Keys;
-
-                //Need to make sure we're using right keys for subscription, maybe change to get for specific site.
-                var vapidAuth = new Lib.Net.Http.WebPush.Authentication.VapidAuthentication(publicKey, privateKey);
-
-                var pushMessage = new PushMessage(message);
-                
-                var task = webPushClient.RequestPushMessageDeliveryAsync(webSubscription, pushMessage, vapidAuth);
-                try
-                {
-                    task.Wait();
-                }
-                catch (AggregateException ae)
-                {
-                    foreach (var e in ae.InnerExceptions)
-                    {
-                        throw e;
-                    }
-                }
+                task.Wait();
             }
-            catch(Exception ex)
+            catch (AggregateException ae)
             {
-                Sitecore.Diagnostics.Log.Error("Error sending Push Notification", ex, this);
+                foreach (var e in ae.InnerExceptions)
+                {
+                    throw e;
+                }
             }
+
         }
     }
 }

@@ -11,6 +11,7 @@ using Sitecore.XConnect;
 using SF.Foundation.PushNotifications.Services;
 using SF.Foundation.PushNotifications.Models;
 using Newtonsoft.Json;
+using Microsoft.Extensions.Logging;
 
 namespace SF.Foundation.PushNotifications.Activities
 {
@@ -23,15 +24,18 @@ namespace SF.Foundation.PushNotifications.Activities
         public string Icon { get; set; }
         public string CTA { get; set; }
 
+        protected ILogger<IActivity> Logger { get; }
 
         public IActivityServices Services { get; set; }
 
         public IPushNotificationService PushNotificationService { get; set; }
 
-        public PushNotification()
+        public PushNotification(ILogger<PushNotification> logger)
         {
             //Was having issues registering the service in the Automation engine, so newing up for now.
             PushNotificationService = new PushNotificationService();
+
+            this.Logger = logger;
         }
 
         public string MessageId { get; set; }
@@ -67,7 +71,7 @@ namespace SF.Foundation.PushNotifications.Activities
                     }
                     catch(Exception ex)
                     {
-                        Sitecore.Diagnostics.Log.Error("Failed to send Push Notification", ex, this);
+                        Logger.LogError(ex, "Failed to send Push Notification");
                     }
                 }
 
@@ -76,7 +80,7 @@ namespace SF.Foundation.PushNotifications.Activities
             }
             catch (Exception ex)
             {
-                Sitecore.Diagnostics.Log.Error("Failed sending Message", ex, this);
+                Logger.LogError(ex, "Failed sending Message");
                 return new Failure("failed");
             }
         }

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+    <!--
+    Marketing Automation activity type registrations.
+    -->
+  <Settings>
+    <Sitecore>
+        <XConnect>
+        <Services>
+            <DescriptorLocator>
+            <Options>
+                <PredicateDescriptors>
+                    <SubscribedForWebPush>
+                        <id>{11006BD6-BC31-4AC1-9F3D-1EE9934DA37A}</id>
+                        <type>SF.Foundation.PushNotifications.Conditions.HasSubscriptionPredicate,SF.Foundation.PushNotifications</type>
+                    </SubscribedForWebPush>
+                </PredicateDescriptors>
+            </Options>
+            </DescriptorLocator>
+        </Services>
+        </XConnect>
+    </Sitecore>
+</Settings>
+</Settings>
+	
+	

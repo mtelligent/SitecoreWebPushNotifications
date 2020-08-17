@@ -12,9 +12,9 @@ self.addEventListener('push', function (event) {
 
     self.registration.showNotification(model.title, {
         body: model.body,
-        icon: "../../../../" + model.icon.replace(/"/g, ''),
-        image: "../../../../" + model.image.replace(/"/g, ''),
-        data: "../../../../" + model.cta.replace(/"/g, '')
+        icon: "../../../.." + model.icon.replace(/"/g, ''),
+        image: "../../../.." + model.image.replace(/"/g, ''),
+        data: "../../../.." + model.cta.replace(/"/g, '')
     });
 
 });

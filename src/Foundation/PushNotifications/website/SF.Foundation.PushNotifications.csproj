@@ -69,6 +69,9 @@
     <Reference Include="Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Microsoft.Extensions.Logging.Abstractions.2.1.1\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -84,6 +87,27 @@
     </Reference>
     <Reference Include="Sitecore.Analytics.XConnect, Version=14.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Sitecore.Analytics.XConnect.9.3.0\lib\net471\Sitecore.Analytics.XConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Framework.Rules, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Sitecore.Framework.Rules.3.3.0\lib\netstandard2.0\Sitecore.Framework.Rules.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Framework.Rules.Abstractions, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Sitecore.Framework.Rules.Abstractions.3.3.0\lib\netstandard2.0\Sitecore.Framework.Rules.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Framework.Rules.Api, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Sitecore.Framework.Rules.Api.3.3.0\lib\netstandard2.0\Sitecore.Framework.Rules.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Framework.Rules.Core, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Sitecore.Framework.Rules.Core.3.3.0\lib\netstandard2.0\Sitecore.Framework.Rules.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Framework.Rules.Model, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Sitecore.Framework.Rules.Model.3.3.0\lib\netstandard2.0\Sitecore.Framework.Rules.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Framework.Rules.Registry, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Sitecore.Framework.Rules.Registry.3.3.0\lib\netstandard2.0\Sitecore.Framework.Rules.Registry.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Framework.Rules.Serialization, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Sitecore.Framework.Rules.Serialization.3.3.0\lib\netstandard2.0\Sitecore.Framework.Rules.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Kernel, Version=14.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Sitecore.Kernel.9.3.0\lib\net471\Sitecore.Kernel.dll</HintPath>
@@ -135,6 +159,9 @@
     </Reference>
     <Reference Include="Sitecore.XConnect.Core, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Sitecore.XConnect.Core.9.3.0\lib\netstandard2.0\Sitecore.XConnect.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.XConnect.Segmentation.Predicates, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Sitecore.XConnect.Segmentation.Predicates.9.3.0\lib\net471\Sitecore.XConnect.Segmentation.Predicates.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.XConnect.Service, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Sitecore.XConnect.Service.9.3.0\lib\netstandard2.0\Sitecore.XConnect.Service.dll</HintPath>
@@ -193,6 +220,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities\PushNotification.cs" />
+    <Compile Include="Conditions\HasSubscriptionPredicate.cs" />
+    <Compile Include="Conditions\HasSubscriptionsCondition.cs" />
     <Compile Include="Constants\FacetNames.cs" />
     <Compile Include="Constants\FieldIds.cs" />
     <Compile Include="Constants\TemplateIds.cs" />
