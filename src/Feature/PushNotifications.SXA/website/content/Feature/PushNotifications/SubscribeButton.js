@@ -13,7 +13,7 @@ XA.component.subscribeButton = (function ($, document) {
             var configId = $(this).attr("data-configId");
 
             //Invoke Register Code.
-            SF.PushNotfications.subscribe(publicKey, goalId, configId)
+            SF.PushNotfications.subscribe(publicKey, goalId, configId);
 
         });
 

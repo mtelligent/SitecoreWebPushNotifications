@@ -221,6 +221,7 @@
   <ItemGroup>
     <Compile Include="Activities\PushNotification.cs" />
     <Compile Include="Conditions\HasSubscriptionPredicate.cs" />
+    <Compile Include="Conditions\HasSubscriptionOnCurrentDeviceCondition.cs" />
     <Compile Include="Conditions\HasSubscriptionsCondition.cs" />
     <Compile Include="Constants\FacetNames.cs" />
     <Compile Include="Constants\FieldIds.cs" />
