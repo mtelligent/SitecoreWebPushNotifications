@@ -24,7 +24,14 @@ namespace SF.Foundation.PushNotifications.Conditions
             Assert.IsNotNull(Tracker.Current.Session, "Tracker.Current.Session is not initialized");
             Assert.IsNotNull(Tracker.Current.Session.Interaction, "Tracker.Current.Session.Interaction is not initialized");
 
-            return PushSubscriptionManager.Current.GetSubscriptions().Count > 0;
+            var subscriptions = PushSubscriptionManager.Current.GetSubscriptions();
+
+            if (subscriptions != null && subscriptions.Count > 0)
+            {
+                return true;
+            }
+
+            return false;
 
         }
     }

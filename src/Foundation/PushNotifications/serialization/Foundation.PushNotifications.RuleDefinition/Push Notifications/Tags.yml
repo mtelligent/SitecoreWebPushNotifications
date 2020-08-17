@@ -1,0 +1,19 @@
+﻿---
+ID: "f51b2b0e-a22f-4c21-9d8d-fc1d22b20948"
+Parent: "6a7615bf-f18c-4b84-a4ee-e269a3eaedb3"
+Template: "96c8e5dd-63c3-496b-a97c-a3e37e1dacba"
+Path: /sitecore/system/Settings/Rules/Definitions/Elements/Push Notifications/Tags
+DB: master
+BranchID: "9a72c539-dbf8-4dad-96d3-a298fc04add6"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{FD4268C6-E588-4C19-B141-B1AAD488887D}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200817T171811Z

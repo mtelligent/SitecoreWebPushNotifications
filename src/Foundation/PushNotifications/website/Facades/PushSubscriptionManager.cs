@@ -49,7 +49,7 @@ namespace SF.Foundation.PushNotifications.Facades
             {
                 return null;
             }
-            if (Tracker.Current.Contact.IsNew)
+            if (Tracker.Current.Contact.IsNew || Tracker.Current.Contact.Identifiers.Count == 0)
             {
                 // write the contact to xConnect so we can work with it
                 SaveContact();

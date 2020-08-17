@@ -48,7 +48,7 @@ It expects the following JSON object posted to the message body:
 
 ### JavaScript Library
 
-To make it easier to manage the subscription process, we have provided a JavaScript library that makes subscriptions seamles. The source file is included in the package here:
+To make it easier to manage the subscription process, we have provided a JavaScript library that makes subscriptions seamless. The source file is included in the package here:
 
 ```
 /content/Feature/PushNotification/PushNotification.js
@@ -73,6 +73,8 @@ The SXA Feature will automatically add everything needed to the site, including 
 ## Sending Notifications
 
 Sending Notifications can be managed through Sitecore's Marketing Automation tool. Create a new campaign that listens for the goal triggered by the Subscription.
+
+![Image of Marketing Automation](MarketingAutomation.png)
 
 Once enrolled, we recommend adding the visitor to a list. These Lists can be leveraged for targeted blasts the same way they could be used for email blasts.
 
