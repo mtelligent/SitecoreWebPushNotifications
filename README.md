@@ -56,7 +56,9 @@ To make it easier to manage the subscription process, we have provided a JavaScr
 
 It includes a global object/class with a single exposed subscribe method:
 
+```
 SF.PushNotfications.subscribe(publicKey, goalId, configId)
+```
 
 It requires the VAPID public key (needed to drive the subscription), the goalId and configId needed to submit to the Rest API.
 
