@@ -26,7 +26,9 @@ Subscription details are managed in a custom xDB facet called  "PushSubscription
 
 To register a new subscription, you can manually post to our Subscribe endpoint:
 
-'''/api/sf/1.0/pushNotification/subscribe
+```
+/api/sf/1.0/pushNotification/subscribe
+```
 
 It expects the following JSON object posted to the message body:
 
