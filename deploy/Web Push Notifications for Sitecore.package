@@ -1,0 +1,136 @@
+<project site="https://toast.sc.dev.local/" format="Zip Package" targetfilefolder="wwwroot">
+  <Metadata>
+    <metadata>
+      <PackageName>Web Push Notifications for Sitecore</PackageName>
+      <Author>David San Filippo</Author>
+      <Version>0.8</Version>
+      <Revision />
+      <License>MIT License
+
+Copyright (c) David San Filippo
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+</License>
+      <Comment />
+      <Attributes />
+      <Readme />
+      <Publisher>mtelligent</Publisher>
+      <PostStep />
+      <PackageID />
+    </metadata>
+  </Metadata>
+  <SaveProject>True</SaveProject>
+  <Sources>
+    <xitems>
+      <Entries>
+        <x-item>/master/sitecore/templates/Feature/SF/PushNotifications/Configuration Templates/{A337767D-0991-4D9C-B61B-9F993E4FE3E1}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Feature/SF/PushNotifications/Configuration Templates/Push Notification Configuration/{54E1455E-BEF8-4E01-A5BD-0F638D3938B8}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Feature/SF/PushNotifications/Configuration Templates/Push Notification Configuration/VAPID Keys/{C622252B-0BCC-4E41-9E95-609050B27210}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Feature/SF/PushNotifications/Configuration Templates/Push Notification Configuration/__Standard Values/{804EA448-F33C-4DDB-90E3-5E64B68DE9A8}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Feature/SF/PushNotifications/Configuration Templates/Push Notification Configuration/Other Keys/{16731055-A6A3-4479-B7A6-04EA0A49575E}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Feature/SF/PushNotifications/Configuration Templates/Push Notification Configuration/VAPID Keys/mailto/{5CCD6304-C9B6-44DE-B93D-A659FBDE5A56}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Feature/SF/PushNotifications/Configuration Templates/Push Notification Configuration/VAPID Keys/Public Key/{1FA3807D-9D2E-46C8-94CC-3E3ACEAD64D3}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Feature/SF/PushNotifications/Configuration Templates/Push Notification Configuration/VAPID Keys/Private Key/{996C8D89-1F45-422D-A345-8894B33EFF57}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Feature/SF/PushNotifications/Configuration Templates/Push Notification Configuration/Other Keys/Google Cloud Platform API Key/{45F3E33E-989D-4EE5-8461-E36E6CFD0109}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Marketing Automation/Activity Types/Send Push Notification/{3D2CCC0A-5E13-421B-96F2-EE737319532F}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Marketing Automation/Activity Types/Send Push Notification/Parameters/{36B4A971-5BA0-4935-B628-ECAEF5222A78}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Marketing Automation/Activity Types/Send Push Notification/Paths/{28D71753-DA87-40F4-9C03-81124E27ECBD}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Marketing Automation/Activity Types/Send Push Notification/Parameters/Title/{214E148E-AFE9-40AF-8052-7ABB72CD15C9}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Marketing Automation/Activity Types/Send Push Notification/Parameters/Body/{B53DB7DB-0566-4E3F-86E4-351AF477693B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Marketing Automation/Activity Types/Send Push Notification/Parameters/Image/{8E51F363-340C-4FA8-B504-A692F8DC5292}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Marketing Automation/Activity Types/Send Push Notification/Parameters/Icon/{FE8AF055-C42E-495D-A375-6D759A9B5DCF}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Marketing Automation/Activity Types/Send Push Notification/Parameters/CTA/{C1CB276C-8889-4D10-9D8D-561525115A2B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Marketing Automation/Activity Types/Send Push Notification/Paths/Default/{CD104BF6-9595-47D2-BB0F-212103C1999C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Marketing Control Panel/Taxonomies/Channel/Online/Automation programs/Web Push Notification automation/{84718BBD-9932-43FC-91B0-19AAEBAD8192}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Marketing Control Panel/Goals/Subscribed to Web Push/{DA0FE302-6AED-49A2-9C7A-622D3E6C98F3}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/Push Notifications/{6A7615BF-F18C-4B84-A4EE-E269A3EAEDB3}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/Push Notifications/Has Subscriptions/{0BD4A1D9-E9F1-41F0-A50E-F870556DBEB3}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/Push Notifications/Has Subscriptions for Current Device/{D4881149-DD69-4824-AFC8-63A18FB36FCA}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/Push Notifications/Tags/{F51B2B0E-A22F-4C21-9D8D-FC1D22B20948}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/Push Notifications/Visibility/{1F9A1E55-4816-4473-9409-AD06FF6444B0}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/Push Notifications/Tags/Default/{5922D768-6D81-4EA1-9EC2-A12B6BA3F9A6}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/XConnect - Contact Personal Details/Where Contact is subscribed for Web Push/{11006BD6-BC31-4AC1-9F3D-1EE9934DA37A}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Tags/Push Notifications/{B8B3B1BF-FB35-4380-9ED7-80E80BA42465}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Tags/Push Notifications/Visibility/{876283E3-6891-4CBC-BEBE-85F5B67CF793}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Conditional Renderings/Tags/Default/{B60C6A64-B367-48F0-86D9-7FA1C3D3B603}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Items</Name>
+    </xitems>
+    <xfiles>
+      <Entries>
+        <x-item>/Content/Feature/PushNotifications/PushNotifications.js</x-item>
+        <x-item>/Content/Feature/PushNotifications/service-Worker.js</x-item>
+        <x-item>/sitecore/shell/client/Applications/MarketingAutomation/plugins/sendPushNotification.plugin.js</x-item>
+        <x-item>/bin/BouncyCastle.Crypto.dll</x-item>
+        <x-item>/bin/Lib.Net.Http.EncryptedContentEncoding.dll</x-item>
+        <x-item>/bin/Lib.Net.Http.WebPush.dll</x-item>
+        <x-item>/bin/SF.Feature.PushNotifications.dll</x-item>
+        <x-item>/bin/SF.Feature.PushNotifications.pdb</x-item>
+        <x-item>/bin/SF.Foundation.PushNotifications.dll</x-item>
+        <x-item>/bin/SF.Foundation.PushNotifications.pdb</x-item>
+        <x-item>/App_Config/Include/Feature/PushNotfiications.config</x-item>
+        <x-item>/App_Config/Include/Foundation/Foundation.PushNotifications.config</x-item>
+        <x-item>/App_Config/Include/Foundation/SendPushNotificationPlugin.config</x-item>
+      </Entries>
+      <Converter>
+        <FileToEntryConverter>
+          <Root />
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Files</Name>
+    </xfiles>
+  </Sources>
+  <Converter>
+    <TrivialConverter>
+      <Transforms />
+    </TrivialConverter>
+  </Converter>
+  <Include />
+  <Exclude />
+  <Name />
+</project>

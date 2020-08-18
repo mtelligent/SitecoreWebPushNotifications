@@ -211,6 +211,7 @@
     <Content Include="App_Config\Include\Foundation\Foundation.PushNotifications.Serialization.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Config\Include\Foundation\SendPushNotificationPlugin.config" />
     <None Include="packages.config" />
     <Content Include="SendPushNotificationsPlugin\package.json" />
     <Content Include="SendPushNotificationsPlugin\src\tsconfig.aot.json" />

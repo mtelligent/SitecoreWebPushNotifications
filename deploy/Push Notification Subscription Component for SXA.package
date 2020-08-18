@@ -1,0 +1,139 @@
+<project site="https://toast.sc.dev.local/" format="Zip Package" targetfilefolder="wwwroot">
+  <Metadata>
+    <metadata>
+      <PackageName>Push Notification Subscription Component for SXA</PackageName>
+      <Author>David San Filippo</Author>
+      <Version>0.8</Version>
+      <Revision />
+      <License>MIT License
+
+Copyright (c) David San Filippo
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+</License>
+      <Comment />
+      <Attributes />
+      <Readme />
+      <Publisher>mtelligent</Publisher>
+      <PostStep />
+      <PackageID />
+    </metadata>
+  </Metadata>
+  <SaveProject>True</SaveProject>
+  <Sources>
+    <xitems>
+      <Entries>
+        <x-item>/master/sitecore/layout/Renderings/Feature/SF/{59C5CC62-70C5-44CA-B0D5-1FA0F8D8E084}/invariant/0</x-item>
+        <x-item>/master/sitecore/layout/Renderings/Feature/SF/PushNotifications/{8737F8F0-E5ED-4902-8E2E-749FB637AF8D}/invariant/0</x-item>
+        <x-item>/master/sitecore/layout/Renderings/Feature/SF/PushNotifications/Subscription Management/{03583967-339C-48BB-9CEC-688AE2D1CCD6}/invariant/0</x-item>
+        <x-item>/master/sitecore/layout/Renderings/Feature/SF/PushNotifications/Subscription Management/Subscribe Button/{3E7B8F7A-B4BA-43F2-B1CD-B37DA81B1048}/invariant/0</x-item>
+        <x-item>/master/sitecore/media library/Base Themes/Push Notifications/{15F192A2-F623-4A54-9D0E-274FB0390448}/invariant/0</x-item>
+        <x-item>/master/sitecore/media library/Base Themes/Push Notifications/Scripts/{6A985AB5-DBBC-4B89-9BBF-4CB900A4A755}/invariant/0</x-item>
+        <x-item>/master/sitecore/media library/Base Themes/Push Notifications/Styles/{E991F1D8-2D7E-4646-9C70-11CAA0798E1F}/invariant/0</x-item>
+        <x-item>/master/sitecore/media library/Base Themes/Push Notifications/Scripts/PushNotifications/{3A32DA62-5934-47CF-B99A-5AB990804563}/invariant/0</x-item>
+        <x-item>/master/sitecore/media library/Base Themes/Push Notifications/Scripts/SubscribeButton/{E9D61ADA-6A28-43EE-9B97-4B8605F3351A}/invariant/0</x-item>
+        <x-item>/master/sitecore/media library/Base Themes/Push Notifications/Styles/SubscribeButton/{9A47B6E9-CE77-4995-82D3-31B1B4700432}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Feature/SF/{0D784DB0-D294-4B68-AE67-911AF75A8AF0}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Feature/SF/PushNotifications/{9FA9E65C-4E70-4669-BCF0-A616762B6166}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Feature/SF/PushNotifications/PushNotifications Site Setup/{5D031A77-ECC4-40B4-B5AC-FFC00CA56163}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Feature/SF/PushNotifications/PushNotifications Tenant Setup/{BF819629-DE02-4894-B38F-EB8C13C258CB}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Feature/SF/PushNotifications/PushNotifications Site Setup/Add Available Renderings/{879E4823-7EB6-4859-8756-63D7483C193E}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Feature/SF/PushNotifications/PushNotifications Site Setup/Add Base Theme/{CDB335D5-3935-4B77-88B2-D6F92726EA31}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Feature/SF/PushNotifications/PushNotifications Site Setup/Add Push Notification Configuration/{3F39F41B-C66C-48B7-90B5-1AA016032D04}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Feature/SF/PushNotifications/PushNotifications Site Setup/Add Subscribe Button Data Folder/{6DC97459-50CF-49F5-A4E4-860368C947E6}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Feature/SF/PushNotifications/PushNotifications Site Setup/Add Subscribe Button Vairants/{A05A10A0-5FEE-483E-8052-63BA7220B0AB}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Feature/SF/{0512CDFC-2D4A-40AD-AF1A-A5B7027BB390}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Feature/SF/PushNotifications/{77206CBD-00CA-413A-A166-2ACC9A769759}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Feature/SF/PushNotifications/Push Notifications Available Renderings/{BF229164-DC1F-45B3-8441-884D6441BA68}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Feature/SF/PushNotifications/Subscribe Button Variants/{E95B8DE5-C2F1-41EB-94AA-EC13EEF9CA26}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Feature/SF/PushNotifications/Push Notifications Available Renderings/$name/{90E1FF80-4566-43FD-A66F-7E2156C4B2EB}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Feature/SF/PushNotifications/Subscribe Button Variants/$name/{A0149F62-CC4F-4BBD-B67C-BF3541E890DB}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Feature/SF/PushNotifications/Subscribe Button Variants/$name/Default/{BE5414ED-7B78-4B0E-9A46-49E1C81A3B38}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Feature/SF/PushNotifications/Subscribe Button Variants/$name/Default/Subscribe/{147C2966-6423-4F4B-B4CB-C0DC32EF8A75}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Feature/SF/PushNotifications/Component Templates/{A8B90AE0-F8ED-4A6C-AF4A-D688736B60E6}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Feature/SF/PushNotifications/Component Templates/Subscribe Button/{B7156DE1-5EA6-4291-A497-2ADF1B9E67AA}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Feature/SF/PushNotifications/Component Templates/Subscribe Button/Subscription Details/{D35AC9CF-D4EF-43EE-B0E1-97172198EF68}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Feature/SF/PushNotifications/Component Templates/Subscribe Button/__Standard Values/{A7D74A88-99EB-4989-ADCC-63FE9E895D89}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Feature/SF/PushNotifications/Component Templates/Subscribe Button/Subscription Details/Goal/{08997DB2-6E49-4ACB-BE37-53605142234A}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Feature/SF/PushNotifications/Folder Templates/{182D05F1-8572-4D38-9A9D-2C54F69AC3AF}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Feature/SF/PushNotifications/Folder Templates/Subscribe Button Folder/{F21B34E9-45BF-4438-81ED-C2A6D699070F}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Feature/SF/PushNotifications/Folder Templates/Subscribe Button Folder/__Standard Values/{077E8818-D356-4F0B-BF5C-96E65034B108}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Feature/SF/PushNotifications/Rendering Parameters/{653CEB45-DBEF-4A5E-BDF2-1C280CDBF20D}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Feature/SF/PushNotifications/Rendering Parameters/Subscribe Button Rendering Parameters/{1132C14A-AC64-4397-BCC1-55BA9FAC57F2}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Feature/SF/PushNotifications/Rendering Parameters/Subscribe Button Rendering Parameters/__Standard Values/{74E2B1AD-6F29-48C6-9B78-02E3C9C60C79}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/WebEdit/Custom Experience Buttons/Subscription Optons/{E0E3F1E9-D8FC-4FDF-AB9B-C9AF818DC65D}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Items</Name>
+    </xitems>
+    <xfiles>
+      <Entries>
+        <x-item>/bin/SF.Feature.PushNotifications.SXA.dll</x-item>
+        <x-item>/bin/SF.Feature.PushNotifications.SXA.pdb</x-item>
+        <x-item>/Content/Feature/PushNotifications/SubscribeButton.css</x-item>
+        <x-item>/Content/Feature/PushNotifications/SubscribeButton.js</x-item>
+        <x-item>/Views/SubscribeButton</x-item>
+        <x-item>/Views/SubscribeButton/Subscribe Button.cshtml</x-item>
+        <x-item>/App_Config/Include/Feature/PushNotfiications.SXA.config</x-item>
+      </Entries>
+      <Converter>
+        <FileToEntryConverter>
+          <Root />
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Files</Name>
+    </xfiles>
+  </Sources>
+  <Converter>
+    <TrivialConverter>
+      <Transforms />
+    </TrivialConverter>
+  </Converter>
+  <Include />
+  <Exclude />
+  <Name />
+</project>

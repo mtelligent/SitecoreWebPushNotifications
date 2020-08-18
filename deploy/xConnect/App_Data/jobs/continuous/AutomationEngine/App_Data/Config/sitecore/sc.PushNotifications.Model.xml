@@ -5,9 +5,9 @@
         <XConnect.Client.Configuration>
           <Options>
             <Models>
-              <CustomModel1>
+              <PushNotificationsModel>
                 <TypeName>SF.Foundation.PushNotifications.Models.CollectionModel, SF.Foundation.PushNotifications</TypeName>
-              </CustomModel1>
+              </PushNotificationsModel>
             </Models>
           </Options>
         </XConnect.Client.Configuration>
