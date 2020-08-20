@@ -70,9 +70,6 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="App_Config\Include\Project\Common.Serialization.config">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="App_Config\Include\Project\Common.config">
       <SubType>Designer</SubType>
     </Content>

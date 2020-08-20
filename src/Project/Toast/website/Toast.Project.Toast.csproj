@@ -63,7 +63,6 @@
     <Content Include="sitecore\login\Toast_Wallpaper.jpg" />
     <Content Include="Views\Layouts\Toast\Default.cshtml" />
     <Content Include="App_Config\Include\Project\z.Toast.DevSettings.config" />
-    <Content Include="App_Config\Include\Project\Toast.Serialization.config" />
     <Content Include="App_Config\Include\Project\Toast.config">
       <SubType>Designer</SubType>
     </Content>
