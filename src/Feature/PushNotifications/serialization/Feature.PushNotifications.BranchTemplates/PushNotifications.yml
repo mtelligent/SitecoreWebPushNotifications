@@ -1,6 +1,6 @@
 ﻿---
-ID: "77206cbd-00ca-413a-a166-2acc9a769759"
-Parent: "0512cdfc-2d4a-40ad-af1a-a5b7027bb390"
+ID: "34ab2232-bc11-4de2-89cc-6ce195bf74e0"
+Parent: "1567643e-2753-40da-80db-59d34075a327"
 Template: "85adbf5b-e836-4932-a333-fe0f9fa1ed1e"
 Path: /sitecore/templates/Branches/Feature/SF/PushNotifications
 DB: master
@@ -11,4 +11,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20200401T151825Z
+      Value: 20200820T203557Z
