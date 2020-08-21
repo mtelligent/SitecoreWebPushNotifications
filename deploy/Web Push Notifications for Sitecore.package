@@ -1,4 +1,4 @@
-<project site="https://toast.sc.dev.local/" format="Zip Package" targetfilefolder="wwwroot">
+<project site="https://webpush.sc.dev.local/" format="Zip Package" targetfilefolder="wwwroot">
   <Metadata>
     <metadata>
       <PackageName>Web Push Notifications for Sitecore</PackageName>

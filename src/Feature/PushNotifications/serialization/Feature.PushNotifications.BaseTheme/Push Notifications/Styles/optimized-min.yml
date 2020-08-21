@@ -1,0 +1,37 @@
+﻿---
+ID: "d361fbb2-091d-4db8-85ab-8c31b3561b04"
+Parent: "e991f1d8-2d7e-4646-9c70-11caa0798e1f"
+Template: "b43ab8d5-e123-42dd-8042-de869cc98c4f"
+Path: "/sitecore/media library/Base Themes/Push Notifications/Styles/optimized-min"
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: People/32x32/package.png
+- ID: "40e50ed9-ba07-4702-992e-a912738d32dc"
+  Hint: Blob
+  BlobID: "42a8a0d3-8b0a-4db7-90a4-d27dcd27b420"
+  Value: LnN1YnNjcmliZS1idXR0b257Y3Vyc29yOnBvaW50ZXJ9
+- ID: "6954b7c7-2487-423f-8600-436cb3b6dc0e"
+  Hint: Size
+  Value: 33
+- ID: "6f47a0a5-9c94-4b48-abeb-42d38def6054"
+  Hint: Mime Type
+  Value: text/css
+- ID: "c06867fe-9a43-4c7d-b739-48780492d06f"
+  Hint: Extension
+  Value: css
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200820T224323Z
+    - ID: "3f4b20e9-36e6-4d45-a423-c86567373f82"
+      Hint: Title
+      Value: "optimized-min"
+    - ID: "ba8341a1-ff30-47b8-ae6a-f4947e4113f0"
+      Hint: Description
+      Value: Experience accelerator optimized file

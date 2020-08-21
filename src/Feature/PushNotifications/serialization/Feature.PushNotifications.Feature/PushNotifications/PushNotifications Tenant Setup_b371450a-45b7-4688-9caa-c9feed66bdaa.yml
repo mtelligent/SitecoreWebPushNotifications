@@ -1,0 +1,21 @@
+﻿---
+ID: "b371450a-45b7-4688-9caa-c9feed66bdaa"
+Parent: "3fb7e49c-2a6f-490d-93c3-8f06b480f171"
+Template: "141df88e-7156-4d2e-a004-c8c1a7c51e9d"
+Path: /sitecore/system/Settings/Feature/SF/PushNotifications/PushNotifications Tenant Setup
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200401T151826Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "c202067e-7fab-4606-afb4-e76df2185ddc"
+      Hint: Name
+      Value: PushNotifications
