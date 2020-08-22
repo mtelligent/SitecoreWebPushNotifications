@@ -15,22 +15,7 @@ SF.PushNotfications = (function () {
         return true;
     }
 
-    function askPermission() {
-        return new Promise(function (resolve, reject) {
-            const permissionResult = Notification.requestPermission(function (result) {
-                resolve(result);
-            });
-
-            if (permissionResult) {
-                permissionResult.then(resolve, reject);
-            }
-        })
-            .then(function (permissionResult) {
-                if (permissionResult !== 'granted') {
-                    throw new Error('We weren\'t granted permission.');
-                }
-            });
-    }
+    
 
     function subscribeUserToPush(publicKey) {
         return navigator.serviceWorker.register('/content/Feature/PushNotifications/service-worker.js')
@@ -109,20 +94,23 @@ SF.PushNotfications = (function () {
     }
 
     function subscribe(publicKey, goalId, configId) {
+
         if (!isSupported()) {
             console.log('Not Supported.');
             return;
 
         }
-        if (!askPermission()) {
-            console.log('Permission Denied')
-            return;
-        }
 
-        subscribeUserToPush(publicKey).then(function (subscription) {
-            sendSubscriptionToBackEnd(subscription, goalId, configId);
+        Notification.requestPermission(function (permissionResult) {
+            if (permissionResult !== 'granted') {
+                console.log('Permission Denied')
+                throw new Error('We weren\'t granted permission.');
+            }
+            subscribeUserToPush(publicKey).then(function (subscription) {
+                sendSubscriptionToBackEnd(subscription, goalId, configId);
+            });
         });
-        
+
     }
 
     function urlBase64ToUint8Array(base64String) {
